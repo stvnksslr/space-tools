@@ -14,7 +14,7 @@
 })();
 
         function LossesCtrl($scope, $http) {
-        	
+
            this.someValue  = 'Some Value!';
 
            // variable does an ajax request on the zkillboard page
@@ -29,3 +29,6 @@
         }
 
         module.controller('LossesCtrl', ['$scope', '$http', LossesCtrl]);
+
+        
+        return module;
