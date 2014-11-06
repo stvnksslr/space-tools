@@ -30,5 +30,3 @@
 
         module.controller('LossesCtrl', ['$scope', '$http', LossesCtrl]);
 
-        
-        return module;
