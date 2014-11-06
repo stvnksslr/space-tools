@@ -12,5 +12,3 @@
             return module;
         });
 })();
-
-var moduleName = 'space-tools.kills',
