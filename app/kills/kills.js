@@ -13,7 +13,7 @@
         });
 })();
 
-        function LossesCtrl($scope, $http) {
+function LossesCtrl($scope, $http) {
 
            this.someValue  = 'Some Value!';
 
@@ -25,8 +25,13 @@
                var kills = response.data;
                console.log(kills);
            });
+        
+        module.controller('LossesCtrl', ['$scope', '$http', LossesCtrl]);
 
+        
+        return module;
+        
         }
 
-        module.controller('LossesCtrl', ['$scope', '$http', LossesCtrl]);
+
 
