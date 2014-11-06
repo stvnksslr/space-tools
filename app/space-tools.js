@@ -6,7 +6,7 @@
 
     define([
         'require',
-        'angular'
+        'angular',
         './kills/kills'
     ], function(require, angular) {
 
