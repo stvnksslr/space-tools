@@ -8,8 +8,9 @@
 </head>
 <body>
     <div ng-controller="MyController as MyCtrl">
-        <h2>{{MyCtrl.someValue}}</h2>
+        <h2>The value is: {{MyCtrl.someValue}}</h2>
         <input type="text" ng-model="MyCtrl.someValue">
+        <button ng-click="MyCtrl.clearValue()">Clear</button>
     </div>
 </body>
 </html>

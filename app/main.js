@@ -20,7 +20,7 @@ require.config({
     }
 });
 
-
-require(['space-tools'], function() {
-    console.log('Require Configured, Space Tools loaded');
+require(['angular', 'space-tools'], function() {
+    console.log('Require Configured, Space Tools loaded, bootstrapping angular app');
+    angular.bootstrap(document.querySelector('html'), ['space-tools']);
 });
