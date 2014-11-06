@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Koshka</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script data-main="app/main.js" src="bower_components/requirejs/require.js"></script>
+</head>
+<body>
+    <div ng-controller="MyController as MyCtrl">
+        <h2>{{MyCtrl.someValue}}</h2>
+        <input type="text" ng-model="MyCtrl.someValue">
+    </div>
+</body>
+</html>
