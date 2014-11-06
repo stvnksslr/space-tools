@@ -2,19 +2,20 @@
     'use strict';
 
     var moduleName = 'space-tools',
-        angularDependencies = [];
+        angularDependencies = ['space-tools.kills'];
 
     define([
         'require',
         'angular'
+        './kills/kills'
     ], function(require, angular) {
 
         var module = angular.module(moduleName, angularDependencies);
 
 
         function MyController($scope) {
-           // Dont really need $scope for anything yet
-           this.someValue  = 'Some Value!';
+            // Dont really need $scope for anything yet
+            this.someValue = 'Some Value!';
         }
 
         MyController.prototype.clearValue = function() {
