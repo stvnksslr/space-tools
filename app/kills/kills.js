@@ -13,7 +13,11 @@
 
             function LossesCtrl($scope, $http) {
 
-                this.someValue = 'Some Value!';
+                loadKills.then(function(response) {
+                    var kills = response.data;
+                    this.kills = kills;
+                    console.log(kills);
+                }.bind(this));
 
                 // variable does an ajax request on the zkillboard page
                 var loadKills = $http.get('https://zkillboard.com/api/losses/no-attackers/allianceID/1354830081/');
