@@ -1,11 +1,15 @@
-
-<table>
-	<tr>
+<div ng-controller="LossesCtrl as Losses">
+    <table>
+    <tr>
         <th>Victim</th>
         <th>Isk Loss</th>
-	</tr>
-	<tr></tr>
-</table>td*2<tab>
+    </tr>
+    <tr ng-repeat="kill in Losses.kills">
+        <td>{{kill.victim.characterName}}</td>
+        <td>{{kill.zkb.totalValue | number : 0}}</td>
+    </tr>
+</table>
+</div>
 
 <table>
 	<tr>
