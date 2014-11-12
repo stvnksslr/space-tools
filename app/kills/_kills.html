@@ -4,7 +4,9 @@
         <th>Victim</th>
         <th>Alliance</th>
         <th>Corp</th>
+        <th>shipTypeID</th>
         <th>Isk Loss</th>
+        
 
     </tr>
 
@@ -15,6 +17,7 @@
         <td>{{kill.victim.allianceName}}</td>
         <td>{{kill.victim.corporationName}}</td>
         <td>{{kill.zkb.totalValue | number : 0}}</td>
+        <td>{{kill.zkb.shipTypeID}}
     </tr>
 </table>
 </div>
