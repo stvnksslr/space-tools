@@ -13,11 +13,12 @@
     Search: <input ng-model="searchText">
 
     <tr ng-repeat="kill in Losses.kills | filter:searchText">
-        <td>{{kill.victim.characterName}}</td>
-        <td>{{kill.victim.allianceName}}</td>
+        <td class="ship-type"><img ng-src="https://image.eveonline.com/Render/{{kill.victim.characterID}}_64.png"> {{kill.victim.characterName}}</td>
+
+        <td class="ship-type"><img ng-src="https://image.eveonline.com/Render/{{kill.victim.allianceID}}_64.png"> {{kill.victim.allianceName}}</td>
         
-        
-        <td class="ship-type"><img ng-src="https://image.eveonline.com/Render/{{kill.victim.corporationName}}_64.png"> {{kill.victim.corporationName}}</td>
+
+        <td class="ship-type"><img ng-src="https://image.eveonline.com/Render/{{kill.victim.corporationID}}_64.png"> {{kill.victim.corporationName}}</td>
 
 
         <td class="ship-type"><img ng-src="https://image.eveonline.com/Render/{{kill.victim.shipTypeID}}_64.png"> {{Losses.typeNames[kill.victim.shipTypeID].name}}</td>
