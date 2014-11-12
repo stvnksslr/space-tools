@@ -2,15 +2,16 @@
     <table>
     <tr>
         <th>Victim</th>
-        <th>Isk Loss</th>
         <th>Alliance</th>
         <th>Corp</th>
+        <th>Isk Loss</th>
+
     </tr>
     <tr ng-repeat="kill in Losses.kills">
         <td>{{kill.victim.characterName}}</td>
+        <td>{{kill.victim.allianceName}}</td>
+        <td>{{kill.victim.corporationName}}</td>
         <td>{{kill.zkb.totalValue | number : 0}}</td>
-        <td>{{kill.zkb.victim.allianceName}}</td>
-        <td>{{kill.zkb.victim.corporationName}}</td>
     </tr>
 </table>
 </div>
