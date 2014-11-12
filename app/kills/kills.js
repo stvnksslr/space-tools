@@ -17,7 +17,7 @@
             var loadKills = $http.get('https://zkillboard.com/api/losses/no-attackers/allianceID/1354830081/'),
                 loadTypeNames = $http.get('app/assets/invTypeNames.json');
 
-            // Using $q.when we can wait until all of the data is loaded before
+            // Using $q.all we can wait until all of the data is loaded before
             // setting it on this controller.
             // We wait untill all data is loaded so that the template doesn't render too early
             $q.all({
