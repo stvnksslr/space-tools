@@ -1,5 +1,5 @@
 <div ng-controller="LossesCtrl as Losses">
-    <table>
+    <table id="searchTextResults">
     <tr>
         <th>Victim</th>
         <th>Alliance</th>
@@ -7,7 +7,10 @@
         <th>Isk Loss</th>
 
     </tr>
-    <tr ng-repeat="kill in Losses.kills">
+
+    Search: <input ng-model="searchText">
+
+    <tr ng-repeat="kill in Losses.kills | filter:searchText">
         <td>{{kill.victim.characterName}}</td>
         <td>{{kill.victim.allianceName}}</td>
         <td>{{kill.victim.corporationName}}</td>
@@ -15,3 +18,5 @@
     </tr>
 </table>
 </div>
+
+

@@ -8,22 +8,6 @@
     <script data-main="app/main.js" src="bower_components/requirejs/require.js"></script>
 </head>
 
-<div ng-init="friends = [{name:'John', phone:'555-1276'},
-                         {name:'Mary', phone:'800-BIG-MARY'},
-                         {name:'Mike', phone:'555-4321'},
-                         {name:'Adam', phone:'555-5678'},
-                         {name:'Julie', phone:'555-8765'},
-                         {name:'Juliette', phone:'555-5678'}]"></div>
-
-Search: <input ng-model="searchText">
-<table id="searchTextResults">
-  <tr><th>Name</th><th>Phone</th></tr>
-  <tr ng-repeat="friend in friends | filter:searchText">
-    <td>{{friend.name}}</td>
-    <td>{{friend.phone}}</td>
-  </tr>
-</table>
-
 <body>
     <div ng-include="'app/kills/_kills.html'"></div>
 </body>
