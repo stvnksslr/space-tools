@@ -7,6 +7,8 @@
     <tr ng-repeat="kill in Losses.kills">
         <td>{{kill.victim.characterName}}</td>
         <td>{{kill.zkb.totalValue | number : 0}}</td>
+        <td>{{kill.zkb.allianceName | number : 0}}</td>
+        <td>{{kill.zkb.corporationName | number : 0}}</td>
     </tr>
 </table>
 </div>
