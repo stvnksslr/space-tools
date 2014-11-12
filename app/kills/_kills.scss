@@ -1,1 +1,8 @@
 @import "./kills/_kills.scss";
+
+
+table.table.kills {
+    tbody > tr > td.ship-type {
+        color: $brand-success;
+    }
+}
