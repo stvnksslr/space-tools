@@ -12,28 +12,35 @@
 
         var module = angular.module(moduleName, angularDependencies);
 
-        function LossesCtrl($scope, $http) {
+        function LossesCtrl($scope, $http, $q) {
 
             var loadKills = $http.get('https://zkillboard.com/api/losses/no-attackers/allianceID/1354830081/'),
                 loadTypeNames = $http.get('app/assets/invTypeNames.json');
 
-            loadKills.then(function(response) {
-                var kills = response.data;
-                this.kills = kills;
-                console.log(kills);
-            }.bind(this));
+            // Using $q.when we can wait until all of the data is loaded before
+            // setting it on this controller.
+            // We wait untill all data is loaded so that the template doesn't render too early
+            $q.all({
+                loadKills: loadKills,
+                loadTypeNames: loadTypeNames
+            }).then(function(results) {
 
-            loadTypeNames.then(function(response) {
-                var typeNames = response.data;
-                this.typeNames = typeNames;
+                var kills = results.loadKills.data,
+                    typeNames = results.loadTypeNames.data;
+
+                console.log(kills);
                 console.log(typeNames);
+
+                this.kills = kills;
+                this.typeNames = typeNames;
+
             }.bind(this));
 
         }
 
         console.log('i was loaded!');
 
-        module.controller('LossesCtrl', ['$scope', '$http', LossesCtrl]);
+        module.controller('LossesCtrl', ['$scope', '$http', '$q', LossesCtrl]);
 
         return module;
     });
