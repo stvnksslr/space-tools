@@ -28,6 +28,10 @@
                 var kills = results.loadKills.data,
                     typeNames = results.loadTypeNames.data;
 
+                for (var i = kills; i >= 0; i++) {
+                    kill.victimShipName = typeNames[kill.victim.shipTypeID].name;
+                };
+
                 console.log(kills);
                 console.log(typeNames);
 
