@@ -12,7 +12,7 @@ require.config({
         'angular': {
             exports: 'angular'
             // deps: ['jquery'] // We don't need the features of jquery for now, but uncomment this if we do
-        }
+        },
         // ,
         // 'angular-loading-bar': ['angular', 'ngAnimate'],
         // 'angular.ui': ['angular'],
