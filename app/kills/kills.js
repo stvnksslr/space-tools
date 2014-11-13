@@ -3,12 +3,13 @@
 
     var moduleName = 'space-tools.kills',
 
-        angularDependencies = [];
+        angularDependencies = ['ui.router'];
 
     define([
         'require',
-        'angular'
-    ], function(require, angular) {
+        'angular',
+        'ui.router'
+    ], function(require, angular, uirouter) {
 
         var module = angular.module(moduleName, angularDependencies);
 
