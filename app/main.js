@@ -16,7 +16,7 @@ require.config({
         // ,
         // 'angular-loading-bar': ['angular', 'ngAnimate'],
         // 'angular.ui': ['angular'],
-         'ui.router': ['angular'],
+         'ui.router': ['angular']
     }
 });
 
