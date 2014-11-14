@@ -1,6 +1,5 @@
 <div ng-controller="LossesCtrl as Losses">
     <table class="table table-striped kills" id="searchTextResults">
-    <dir-pagination-controls></dir-pagination-controls>
     <tr>
         <th>Victim</th>
         <th>Alliance</th>
@@ -12,7 +11,6 @@
     </tr>
 
     Search: <input ng-model="searchText">
-  <div dir-paginate="item in items | itemsPerPage: 10">
     <tr ng-repeat="kill in Losses.kills | filter:searchText">
         <td class="Character"><img ng-src="https://image.eveonline.com/Character/{{kill.victim.characterID}}_64.jpg"> {{kill.victim.characterName}}</td>
 
@@ -23,7 +21,6 @@
         <td class="Ship-type"><img ng-src="https://image.eveonline.com/Render/{{kill.victim.shipTypeID}}_64.png"> {{Losses.typeNames[kill.victim.shipTypeID].name}}</td>
         <td>{{kill.zkb.totalValue | number : 0}}</td>
     </tr>
-    </div>
 </table>
 </div>
 
