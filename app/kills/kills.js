@@ -3,7 +3,7 @@
 
     var moduleName = 'space-tools.kills',
 
-        angularDependencies = ['ui.router','angularUtils.directives.dirPagination'];
+        angularDependencies = ['ui.router'];
 
     define([
         'require',
