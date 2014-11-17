@@ -10,8 +10,8 @@
         var module = angular.module(moduleName, angularDependencies);
 
         module.directive('helloWorld', function() {
-        	template: '<div>hi</div>',
             return {
+            	template: '<div>hi</div>',
                 controller: function($scope) {
                     alert('controller');
                 }
