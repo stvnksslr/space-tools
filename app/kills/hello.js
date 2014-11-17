@@ -1,10 +1,7 @@
 (function() {
     'use strict';
-
     var moduleName = 'space-tools.kills.helloWorld',
-
         angularDependencies = ['ui.router'];
-
     define([
         'require',
         'angular',
@@ -12,7 +9,7 @@
     ], function(require, angular) {
         var module = angular.module(moduleName, angularDependencies);
 
-        .directive('helloWorld', function) {
+        module.directive('helloWorld', function) {
             return {
                 controller: function($scope) {
                     alert('controller');
