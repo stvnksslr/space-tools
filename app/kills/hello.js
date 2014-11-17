@@ -12,7 +12,7 @@
     ], function(require, angular) {
 
         var module = angular.module(moduleName, angularDependencies);
-        .directvive('helloWorld', function) {
+        .directive('helloWorld', function) {
         	return {
         		controller: function($scope){
         			alert('controller');
