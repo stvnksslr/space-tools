@@ -8,7 +8,8 @@
     define([
         'require',
         'angular',
-        'ui.router'
+        'ui.router',
+        'helloWorld'
     ], function(require, angular, uirouter) {
 
         var module = angular.module(moduleName, angularDependencies);
