@@ -1,27 +1,30 @@
 <div ng-controller="LossesCtrl as Losses">
 
-<hello-world></hello-world>
+    <hello-world></hello-world>
 
     <table class="table table-striped kills" id="searchTextResults">
-    <tr>
-        <th>Victim</th>
-        <th>Alliance</th>
-        <th>Corp</th>
-        <th>Ship type</th>
-        <th>Isk Loss</th>
-    </tr>
+        <tr>
+            <th>Victim</th>
+            <th>Alliance</th>
+            <th>Corp</th>
+            <th>Ship type</th>
+            <th>Isk Loss</th>
+        </tr>
 
-    Search: <input ng-model="searchText">
+        Search:
+        <input ng-model="searchText">
 
-    <tr ng-repeat="kill in Losses.kills | filter:searchText">
-        <td class="Character"><img ng-src="https://image.eveonline.com/Character/{{kill.victim.characterID}}_64.jpg"> {{kill.victim.characterName}}</td>
-        <td class="Alliance"><img ng-src="https://image.eveonline.com/Alliance/{{kill.victim.allianceID}}_64.png"> {{kill.victim.allianceName}}</td>
-        <td class="Corp"><img ng-src="https://image.eveonline.com/Corporation/{{kill.victim.corporationID}}_64.png"> {{kill.victim.corporationName}}</td>
-        <td class="Ship-type"><img ng-src="https://image.eveonline.com/Render/{{kill.victim.shipTypeID}}_64.png"> {{Losses.typeNames[kill.victim.shipTypeID].name}}</td>
-        <td>{{kill.zkb.totalValue | number : 0}}</td>
-    
-    </tr>
-</table>
+        <tr ng-repeat="kill in Losses.kills | filter:searchText">
+            <td class="Character">
+                <img ng-src="https://image.eveonline.com/Character/{{kill.victim.characterID}}_64.jpg">{{kill.victim.characterName}}</td>
+            <td class="Alliance">
+                <img ng-src="https://image.eveonline.com/Alliance/{{kill.victim.allianceID}}_64.png">{{kill.victim.allianceName}}</td>
+            <td class="Corp">
+                <img ng-src="https://image.eveonline.com/Corporation/{{kill.victim.corporationID}}_64.png">{{kill.victim.corporationName}}</td>
+            <td class="Ship-type">
+                <img ng-src="https://image.eveonline.com/Render/{{kill.victim.shipTypeID}}_64.png">{{Losses.typeNames[kill.victim.shipTypeID].name}}</td>
+            <td>{{kill.zkb.totalValue | number : 0}}</td>
+
+        </tr>
+    </table>
 </div>
-
-
