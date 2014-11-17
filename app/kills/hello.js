@@ -1,17 +1,19 @@
-angular.module('app.directives.helloWorld', {
+(function() {
+    'use strict';
+
+    var moduleName = 'space-tools.helloWorld',
+
+        angularDependencies = [];
+
     define([
         'require',
-        'angular',
-        'ui.router'
-    ], setup: function(require, angular, uirouter) {    // setup for app.directives.helloWorld
-    return {
-    	restrict: 'E',
-    	controller: function(){
-    	    console.log('hopefully this is working');
-    	}
-    }
-  },
-  teardown: function() {
-    //teardown for app.directives.helloWorld
-  }
-});
+        'angular'
+    ], function(require, angular) {
+
+        var module = angular.module(moduleName, angularDependencies);
+        console.log('another attempt at getting this working');
+
+        return module;
+    });
+})();
+    
