@@ -8,8 +8,7 @@
     define([
         'require',
         'angular',
-        'ui.router',
-        'space-tools.helloWorld'
+        'ui.router'
     ], function(require, angular, uirouter) {
 
         var module = angular.module(moduleName, angularDependencies);
