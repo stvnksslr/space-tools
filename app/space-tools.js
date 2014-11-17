@@ -2,7 +2,7 @@
     'use strict';
 
     var moduleName = 'space-tools',
-        angularDependencies = ['space-tools.kills','space-tool.helloWorld'];
+        angularDependencies = ['space-tools.kills'];
 
     define([
         'require',
