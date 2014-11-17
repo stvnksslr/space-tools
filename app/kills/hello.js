@@ -16,7 +16,7 @@
                     alert('controller');
                 }
             }
-        }
+        })
         return module;
     });
 })();
