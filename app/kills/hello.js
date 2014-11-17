@@ -11,14 +11,13 @@
         'uirouter'
     ], function(require, angular) {
 
+
         var module = angular.module(moduleName, angularDependencies);
         .directive('helloWorld', function) {
         	return {
         		controller: function($scope){
         			alert('controller');
         		}
-
-        	}
         }
 
 
