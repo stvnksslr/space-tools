@@ -1,6 +1,6 @@
 (function() {
     'use strict';
-    var moduleName = 'space-tools.kills.displayKills',
+    var moduleName = 'space-tools.kills.killmail',
         angularDependencies = ['ui.router'];
     define([
         'require',
