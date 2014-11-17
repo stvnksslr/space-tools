@@ -8,9 +8,9 @@
     ], function(require, angular) {
         var module = angular.module(moduleName, angularDependencies);
 
-        module.directive('helloWorld', function() {
+        module.directive('killmail', function() {
             return {
-                templateUrl: require.toUrl('./_displayKills.html'),
+                templateUrl: require.toUrl('./_killmail.html'),
                 controller: function($scope) {
                     alert('controller');
                 }
