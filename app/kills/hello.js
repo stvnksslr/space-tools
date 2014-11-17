@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    var moduleName = 'space-tools.helloWorld',
+    var moduleName = 'space-tools.kills.helloWorld',
 
         angularDependencies = ['ui.router'];
 
