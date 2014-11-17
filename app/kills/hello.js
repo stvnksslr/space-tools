@@ -4,8 +4,7 @@
         angularDependencies = ['ui.router'];
     define([
         'require',
-        'angular',
-        'uirouter'
+        'angular'
     ], function(require, angular) {
         var module = angular.module(moduleName, angularDependencies);
 
