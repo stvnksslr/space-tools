@@ -2,8 +2,7 @@ angular.module('app.directives.helloWorld', {
     define([
         'require',
         'angular',
-        'ui.router',
-        'app.directives.helloWorld'
+        'ui.router'
     ], setup: function(require, angular, uirouter) {    // setup for app.directives.helloWorld
     return {
     	restrict: 'E',
