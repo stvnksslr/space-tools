@@ -9,7 +9,7 @@
         'require',
         'angular',
         'ui.router',
-        './hello'
+        './kills/displayKills'
     ], function(require, angular, uirouter) {
 
         var module = angular.module(moduleName, angularDependencies);
