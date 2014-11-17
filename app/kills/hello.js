@@ -1,11 +1,14 @@
 angular.module('app.directives.helloWorld', {
-  setup: function() {
-    // setup for app.directives.helloWorld
+    define([
+        'require',
+        'angular',
+        'ui.router',
+        'app.directives.helloWorld'
+    ], setup: function(require, angular, uirouter) {    // setup for app.directives.helloWorld
     return {
     	restrict: 'E',
     	controller: function(){
     	    console.log('hopefully this is working');
-
     	}
     }
   },
