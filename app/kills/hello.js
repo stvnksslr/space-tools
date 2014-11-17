@@ -9,7 +9,7 @@
     ], function(require, angular) {
         var module = angular.module(moduleName, angularDependencies);
 
-        module.directive('helloWorld', function) {
+        module.directive('helloWorld', function() {
             return {
                 controller: function($scope) {
                     alert('controller');
