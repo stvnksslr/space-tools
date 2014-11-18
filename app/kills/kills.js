@@ -14,11 +14,7 @@
 
         var module = angular.module(moduleName, angularDependencies);
 
-        var killsApp = angular.module('killsApp', ['ui.router']);
-
-
-
-        killsApp.config(function($stateProvider, $urlRouterProvider) {
+        module.config(function($stateProvider, $urlRouterProvider) {
 
             $urlRouterProvider.otherwise('/kills');
 
