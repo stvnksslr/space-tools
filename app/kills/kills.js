@@ -27,13 +27,23 @@
                 // HOME STATES AND NESTED VIEWS ========================================
                 .state('kills', {
                     url: '/kills',
-                    templateUrl: 'kills.html'
+                    templateUrl: '_kills.html'
                 })
 
-                // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
-                .state('killmail.html', {
-                    // we'll get to this in a bit
-                });
+                // nested list with custom controller
+                .state('kills.pilotStats', {
+                    url: '/pilotStats',
+                    templateUrl: '_pilotStats.html',
+                    controller: function($scope) {
+                        $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
+                    }
+                })
+
+                // nested list with just some random string data
+                .state('home.paragraph', {
+                    url: '/paragraph',
+                    template: 'I could sure use a drink right now.'
+                })
 
         });
 
