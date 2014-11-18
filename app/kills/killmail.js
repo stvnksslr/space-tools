@@ -12,7 +12,6 @@
             return {
                 templateUrl: require.toUrl('./_killmail.html'),
                 controller: function($scope) {
-                    alert('controller');
                 }
             }
         })

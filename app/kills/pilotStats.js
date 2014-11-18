@@ -12,7 +12,7 @@
             return {
                 templateUrl: require.toUrl('./_pilotStats.html'),
                 controller: function($scope) {
-                    alert('controller');
+                    this.pilot;
                 }
             }
         })

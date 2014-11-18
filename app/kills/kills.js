@@ -30,9 +30,8 @@
                 // nested list with custom controller
                 .state('kills.pilotStats', {
                     url: '/pilotStats',
-                    templateUrl: require.toUrl('./pilotStats.html'),
+                    templateUrl: require.toUrl('./_pilotStats.html'),
                     controller: function($scope) {
-                        $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
                     }
                 })
 
