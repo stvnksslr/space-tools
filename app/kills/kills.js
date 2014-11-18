@@ -31,7 +31,7 @@
                 })
 
                 // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
-                .state('extra', {
+                .state('killmail.html', {
                     // we'll get to this in a bit
                 });
 
