@@ -3,7 +3,7 @@ require.config({
         'angular': '../bower_components/angular/angular',
         // 'lodash': '../bower_components/lodash/dist/lodash', // You should probably use lodash
         // 'angular.ui': '../bower_components/angular-ui/build/angular-ui', // You might want to use angular-ui
-         'ui.router': '../bower_components/angular-ui-router/release/angular-ui-router.js'
+         'ui.router': '../bower_components/angular-ui-router/release/angular-ui-router'
         // 'angular-loading-bar': '../bower_components/angular-loading-bar/build/loading-bar', // This is :coal:
         // 'jquery': '../bower_components/jquery/dist/jquery', // Lets hope you dont need this
     },
