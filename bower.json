@@ -16,6 +16,7 @@
     "requirejs": "*"
   },
   "devDependencies": {
-    "bootswatch-scss": "~3.2.0"
+    "bootswatch-scss": "~3.2.0",
+    "bootswatch-sass": "~3.3.1"
   }
 }
