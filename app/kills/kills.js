@@ -9,7 +9,7 @@
         'require',
         'angular',
         'ui.router',
-        '/app/kills/kills.js'
+        './kills'
     ], function(require, angular, uirouter) {
 
         var module = angular.module(moduleName, angularDependencies);
