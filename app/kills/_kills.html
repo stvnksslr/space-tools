@@ -1,5 +1,7 @@
 <div ng-controller="LossesCtrl as Losses">
 
+    <killmail></killmail>
+
     <table class="table table-striped kills" id="searchTextResults">
         <tr>
             <th>Victim</th>
@@ -22,7 +24,6 @@
             <td class="Ship-type">
                 <img ng-src="https://image.eveonline.com/Render/{{kill.victim.shipTypeID}}_64.png">{{Losses.typeNames[kill.victim.shipTypeID].name}}</td>
             <td>{{kill.zkb.totalValue | number : 0}}</td>
-
         </tr>
     </table>
 </div>

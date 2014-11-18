@@ -6,9 +6,9 @@
     <tr>
      <tr ng-repeat="kill in Losses.pilot | filter:searchText">
         <td class="items">
-            <img ng-src="https://image.eveonline.com/Render/{{kill.items}}_64.png">{{kill.items}}</td>
+            {{kill.items}}
+        </td>
     </tr>
-
 </table>
 
 
