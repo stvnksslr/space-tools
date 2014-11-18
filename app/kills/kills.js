@@ -2,13 +2,14 @@
     'use strict';
 
     var moduleName = 'space-tools.kills',
-        angularDependencies = ['ui.router', 'space-tools.kills.killmail'];
+        angularDependencies = ['ui.router', 'space-tools.kills.killmail', 'space-tools.kills.pilotStats'];
 
     define([
         'require',
         'angular',
         'ui.router',
         './kills',
+        './pilotStats',
         './killmail'
     ], function(require, angular, uirouter) {
 
@@ -23,13 +24,13 @@
                 // HOME STATES AND NESTED VIEWS ========================================
                 .state('kills', {
                     url: '/kills',
-                    templateUrl: '_kills.html'
+                    templateUrl: 'kills.html'
                 })
 
                 // nested list with custom controller
                 .state('kills.pilotStats', {
                     url: '/pilotStats',
-                    templateUrl: '_pilotStats.html',
+                    templateUrl: 'pilotStats.html',
                     controller: function($scope) {
                         $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
                     }
