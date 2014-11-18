@@ -14,6 +14,30 @@
 
         var module = angular.module(moduleName, angularDependencies);
 
+        var routerApp = angular.module('routerApp', ['ui.router']);
+
+
+
+        routerApp.config(function($stateProvider, $urlRouterProvider) {
+
+            $urlRouterProvider.otherwise('/kills');
+
+            $stateProvider
+
+                // HOME STATES AND NESTED VIEWS ========================================
+                .state('kills', {
+                    url: '/kills',
+                    templateUrl: 'kills.html'
+                })
+
+                // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
+                .state('extra', {
+                    // we'll get to this in a bit
+                });
+
+        });
+
+
         function LossesCtrl($scope, $http, $q) {
 
             var loadAlliance = $http.get('https://zkillboard.com/api/losses/no-attackers/allianceID/1354830081/'),
