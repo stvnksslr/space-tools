@@ -24,13 +24,13 @@
                 // HOME STATES AND NESTED VIEWS ========================================
                 .state('kills', {
                     url: '/kills',
-                    templateUrl: 'kills.html'
+                    templateUrl: require.toUrl('./_kills.html')
                 })
 
                 // nested list with custom controller
                 .state('kills.pilotStats', {
                     url: '/pilotStats',
-                    templateUrl: 'pilotStats.html',
+                    templateUrl: require.toUrl('./pilotStats.html'),
                     controller: function($scope) {
                         $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
                     }
@@ -44,6 +44,7 @@
 
         });
 
+        // templateUrl: require.toUrl('./_killmail.html'),
 
         function LossesCtrl($scope, $http, $q) {
 
