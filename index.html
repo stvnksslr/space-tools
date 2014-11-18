@@ -1,3 +1,5 @@
+<!-- index.tml -->
+
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="app/app.css">
@@ -10,10 +12,21 @@
     <title>Welcome to Space Tools!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script data-main="app/main.js" src="bower_components/requirejs/require.js"></script>
+
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="#">AngularUI Router</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="about">About</a></li>
+        </ul>
+    </nav>
 </head>
 
-<body>
+<body ng-app="killsApp">
     <div ng-include="'app/kills/_kills.html'"></div>
+
 
     <div ui-view></div>
 

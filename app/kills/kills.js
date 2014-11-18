@@ -14,11 +14,11 @@
 
         var module = angular.module(moduleName, angularDependencies);
 
-        var routerApp = angular.module('routerApp', ['ui.router']);
+        var killsApp = angular.module('killsApp', ['ui.router']);
 
 
 
-        routerApp.config(function($stateProvider, $urlRouterProvider) {
+        killsApp.config(function($stateProvider, $urlRouterProvider) {
 
             $urlRouterProvider.otherwise('/kills');
 
