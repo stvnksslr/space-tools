@@ -14,7 +14,7 @@
         Search:
         <input ng-model="searchText">
 
-        <tr ng-repeat="kill in Losses.alliance | filter:searchText">
+        <tr ng-repeat="kill in Losses.pilot | filter:searchText">
             <td class="Character">
                 <img ng-src="https://image.eveonline.com/Character/{{kill.victim.characterID}}_64.jpg">{{kill.victim.characterName}}</td>
             <td class="Alliance">
