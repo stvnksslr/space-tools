@@ -1,3 +1,21 @@
-/**
- * Created by skessler on 11/18/14.
- */
+(function() {
+    'use strict';
+    var moduleName = 'space-tools.kills.pilotStats',
+        angularDependencies = ['ui.router'];
+    define([
+        'require',
+        'angular'
+    ], function(require, angular) {
+        var module = angular.module(moduleName, angularDependencies);
+
+        module.directive('killmail', function() {
+            return {
+                templateUrl: require.toUrl('./_pilotStats.html'),
+                controller: function($scope) {
+                    alert('controller');
+                }
+            }
+        })
+        return module;
+    });
+})();
