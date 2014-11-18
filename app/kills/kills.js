@@ -36,9 +36,8 @@
                 })
 
                 // nested list with just some random string data
-                .state('home.paragraph', {
-                    url: '/paragraph',
-                    template: 'I could sure use a drink right now.'
+                .state('kills.killmail', {
+                    templateUrl: require.toUrl('./_killmail.html')
                 })
 
         });
