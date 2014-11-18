@@ -2,7 +2,6 @@
     'use strict';
 
     var moduleName = 'space-tools.kills',
-
         angularDependencies = ['ui.router'];
 
     define([

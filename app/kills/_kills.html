@@ -1,7 +1,5 @@
 <div ng-controller="LossesCtrl as Losses">
 
-    <!--<killmail></killmail> -->
-
     <table class="table table-striped kills" id="searchTextResults">
         <tr>
             <th>Victim</th>
@@ -14,7 +12,7 @@
         Search:
         <input ng-model="searchText">
 
-        <tr ng-repeat="kill in Losses.kills | filter:searchText">
+        <tr ng-repeat="kill in Losses.alliance | filter:searchText">
             <td class="Character">
                 <img ng-src="https://image.eveonline.com/Character/{{kill.victim.characterID}}_64.jpg">{{kill.victim.characterName}}</td>
             <td class="Alliance">
