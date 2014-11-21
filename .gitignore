@@ -2,6 +2,7 @@ app/*.css
 build/
 bower_components/
 node_modules/
+.idea/
 
 spaceTools.iml
 app/app.css.map
