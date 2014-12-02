@@ -34,7 +34,7 @@
                 // nested list with custom controller
                 .state('km-tools.pilotStats', {
                     url: '/pilotStats',
-                    templateUrl: require.toUrl('./km-tools/_pilotStats.html'),
+                    templateUrl: require.toUrl('./km-tools/pilotStats/_pilotStats.html'),
                     controller: function($scope) {
                     }
                 })
