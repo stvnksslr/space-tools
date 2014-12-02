@@ -16,17 +16,15 @@
     <nav class="navbar navbar-default" role="navigation">
 
         <div class="navbar-header">
-            <a class="navbar-brand" ui-sref="kills">Space-Tools</a>
+            <a class="navbar-brand" ui-sref="km-tools">Space-Tools</a>
         </div>
 
-
-        <!-- Single button -->
         <div class="btn-group" ng-controller="navProcessing" dropdown is-open="status.isopen">
             <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle>
                 Kill-Mail Tools <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
-                <li><a ui-sref="kills">Pilot Killboard</a></li>
+                <li><a ui-sref="pilotStats">Pilot Killboard</a></li>
             </ul>
         </div>
 

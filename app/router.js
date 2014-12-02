@@ -38,12 +38,6 @@
                     controller: function($scope) {
                     }
                 })
-
-                // nested list with just some random string data
-//                .state('kills.killmail', {
-//                    templateUrl: require.toUrl('./kills/_killmail.html')
-//                })
-
         });
 
         return module;
