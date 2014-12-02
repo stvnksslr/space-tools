@@ -2,12 +2,13 @@
     'use strict';
 
     var moduleName = 'space-tools',
-        angularDependencies = ['space-tools.kills','space-tools.router'];
+        angularDependencies = ['space-tools.kills','space-tools.router','space-tools.navbar'];
 
     define([
         'require',
         'angular',
         './router',
+        './../navbar',
         './kills/kills'
     ], function(require, angular) {
 

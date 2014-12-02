@@ -19,14 +19,12 @@
             <a class="navbar-brand" ui-sref="kills">Space-Tools</a>
         </div>
 
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
-            <ul class="nav navbar-nav">
-                <li class="dropdown open">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Killboard Tools <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Pilot Search</a></li>
-                    </ul>
-                </li>
+        <div class="btn-group" dropdown is-open="status.isopen">
+            <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+                Button dropdown <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
             </ul>
         </div>
 
@@ -37,3 +35,4 @@
 </body>
 
 </html>
+
