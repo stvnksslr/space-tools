@@ -15,35 +15,6 @@
 
         var module = angular.module(moduleName, angularDependencies);
 
-        module.config(function($stateProvider, $urlRouterProvider) {
-
-            $urlRouterProvider.otherwise('/kills');
-
-            $stateProvider
-
-                // HOME STATES AND NESTED VIEWS ========================================
-                .state('kills', {
-                    url: '/kills',
-                    templateUrl: require.toUrl('./_kills.html')
-                })
-
-                // nested list with custom controller
-                .state('kills.pilotStats', {
-                    url: '/pilotStats',
-                    templateUrl: require.toUrl('./_pilotStats.html'),
-                    controller: function($scope) {
-                    }
-                })
-
-                // nested list with just some random string data
-                .state('kills.killmail', {
-                    templateUrl: require.toUrl('./_killmail.html')
-                })
-
-        });
-
-        // templateUrl: require.toUrl('./_killmail.html'),
-
         function LossesCtrl($scope, $http, $q) {
 
             var loadAlliance = $http.get('https://zkillboard.com/api/losses/no-attackers/allianceID/1354830081/'),
