@@ -9,7 +9,7 @@
         'angular',
         './router',
         './../navbar',
-        './kills/kills'
+        './km-tools/kills'
     ], function(require, angular) {
 
         var module = angular.module(moduleName, angularDependencies);

@@ -13,9 +13,9 @@
         'require',
         'angular',
         'ui.router',
-        './kills/kills',
-        './kills/pilotStats',
-        './kills/killmail'
+        './km-tools/kills',
+        './km-tools/pilotStats/pilotStats',
+        './km-tools/killmail'
     ], function(require, angular, uirouter) {
 
         var module = angular.module(moduleName, angularDependencies);
