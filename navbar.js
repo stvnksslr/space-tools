@@ -7,13 +7,14 @@
 
     var moduleName = 'space-tools.navbar',
 
-        angularDependencies = ['ui.router'];
+        angularDependencies = ['ui.router','ui.bootstrap'];
 
     define([
         'require',
         'angular',
-        'ui.router'
-    ], function(require, angular, uirouter) {
+        'ui.router',
+        'ui.boostrap'
+    ], function(require, angular, uirouter, uiboostrap) {
 
         var module = angular.module(moduleName, angularDependencies);
 
