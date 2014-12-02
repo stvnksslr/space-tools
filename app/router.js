@@ -7,7 +7,7 @@
 
     var moduleName = 'space-tools.router',
 
-        angularDependencies = ['ui.router', 'space-tools.km-tools.pilotStats'];
+        angularDependencies = ['ui.router', 'space-tools.km-tools','space-tools.km-tools.pilotStats'];
 
     define([
         'require',
@@ -21,7 +21,7 @@
 
         module.config(function($stateProvider, $urlRouterProvider) {
 
-            $urlRouterProvider.otherwise('/kills');
+            $urlRouterProvider.otherwise('/km-tools');
 
             $stateProvider
 

@@ -5,7 +5,7 @@
     define([
         'require',
         'angular'
-    ], function(require, angular) {
+    ], function(require, angular, uirouter) {
         var module = angular.module(moduleName, angularDependencies);
 
         module.directive('pilotStats', function() {
