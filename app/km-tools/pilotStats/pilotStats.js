@@ -1,10 +1,10 @@
 (function() {
     'use strict';
-    var moduleName = 'space-tools.kills.pilotStats',
+    var moduleName = 'space-tools.km-tools.pilotStats',
         angularDependencies = ['ui.router'];
     define([
         'require',
-        '../../../bower_components/angular/angular'
+        'angular'
     ], function(require, angular) {
         var module = angular.module(moduleName, angularDependencies);
 

@@ -7,15 +7,14 @@
 
     var moduleName = 'space-tools.router',
 
-        angularDependencies = ['ui.router', 'space-tools.kills.killmail', 'space-tools.kills.pilotStats'];
+        angularDependencies = ['ui.router', 'space-tools.km-tools.pilotStats'];
 
     define([
         'require',
         'angular',
         'ui.router',
-        './km-tools/kills',
-        './km-tools/pilotStats/pilotStats',
-        './km-tools/killmail'
+        './km-tools/km-tools',
+        './km-tools/pilotStats/pilotStats'
     ], function(require, angular, uirouter) {
 
         var module = angular.module(moduleName, angularDependencies);
@@ -27,23 +26,23 @@
             $stateProvider
 
                 // HOME STATES AND NESTED VIEWS ========================================
-                .state('kills', {
-                    url: '/kills',
-                    templateUrl: require.toUrl('./kills/_kills.html')
+                .state('km-tools', {
+                    url: '/km-tools',
+                    templateUrl: require.toUrl('./km-tools/_km-tools.html')
                 })
 
                 // nested list with custom controller
-                .state('kills.pilotStats', {
+                .state('km-tools.pilotStats', {
                     url: '/pilotStats',
-                    templateUrl: require.toUrl('./kills/_pilotStats.html'),
+                    templateUrl: require.toUrl('./km-tools/_pilotStats.html'),
                     controller: function($scope) {
                     }
                 })
 
                 // nested list with just some random string data
-                .state('kills.killmail', {
-                    templateUrl: require.toUrl('./kills/_killmail.html')
-                })
+//                .state('kills.killmail', {
+//                    templateUrl: require.toUrl('./kills/_killmail.html')
+//                })
 
         });
 
