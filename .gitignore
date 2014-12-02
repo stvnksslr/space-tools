@@ -7,3 +7,4 @@ node_modules/
 spaceTools.iml
 app/app.css.map
 npm-debug.log
+.sass-cache
