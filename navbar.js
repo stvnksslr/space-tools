@@ -13,7 +13,7 @@
         'require',
         'angular',
         'ui.router',
-        'ui.boostrap'
+        'ui.bootstrap'
     ], function(require, angular, uirouter, uiboostrap) {
 
         var module = angular.module(moduleName, angularDependencies);
