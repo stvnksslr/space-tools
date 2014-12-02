@@ -1,7 +1,7 @@
 require.config({
     paths: {
         'angular': '../bower_components/angular/angular',
-        'ui.boostrap': '../bower_components/angular-bootstrap/ui-bootstrap',
+        'ui.bootstrap': '../bower_components/angular-bootstrap/ui-bootstrap',
         // 'lodash': '../bower_components/lodash/dist/lodash', // You should probably use lodash
         // 'angular.ui': '../bower_components/angular-ui/build/angular-ui', // You might want to use angular-ui
          'ui.router': '../bower_components/angular-ui-router/release/angular-ui-router'
