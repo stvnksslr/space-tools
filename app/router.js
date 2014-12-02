@@ -14,9 +14,9 @@
         'angular',
         'ui.router',
         'router',
-        './kills',
-        './pilotStats',
-        './killmail'
+        './kills/kills',
+        './kills/pilotStats',
+        './kills/killmail'
     ], function(require, angular, uirouter) {
 
         var module = angular.module(moduleName, angularDependencies);
@@ -30,20 +30,20 @@
                 // HOME STATES AND NESTED VIEWS ========================================
                 .state('kills', {
                     url: '/kills',
-                    templateUrl: require.toUrl('./_kills.html')
+                    templateUrl: require.toUrl('./kills/_kills.html')
                 })
 
                 // nested list with custom controller
                 .state('kills.pilotStats', {
                     url: '/pilotStats',
-                    templateUrl: require.toUrl('./_pilotStats.html'),
+                    templateUrl: require.toUrl('./kills/_pilotStats.html'),
                     controller: function($scope) {
                     }
                 })
 
                 // nested list with just some random string data
                 .state('kills.killmail', {
-                    templateUrl: require.toUrl('./_killmail.html')
+                    templateUrl: require.toUrl('./kills/_killmail.html')
                 })
 
         });
