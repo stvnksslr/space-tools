@@ -7,8 +7,8 @@
     define([
         'require',
         'angular',
-        './kills/kills',
-        './router'
+        './router',
+        './kills/kills'
     ], function(require, angular) {
 
         var module = angular.module(moduleName, angularDependencies);

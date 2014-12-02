@@ -13,7 +13,6 @@
         'require',
         'angular',
         'ui.router',
-        'router',
         './kills/kills',
         './kills/pilotStats',
         './kills/killmail'
