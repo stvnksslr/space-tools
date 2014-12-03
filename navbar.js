@@ -36,6 +36,11 @@
 
         }
 
+        function navProcessing($scope,$http,$q) {
+
+        }
+
+
         module.controller('navProcessing', ['$scope', '$http', '$q', navProcessing]);
         console.log('Nav Bar Loaded');
         return module;

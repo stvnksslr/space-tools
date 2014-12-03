@@ -13,25 +13,67 @@
 
 <body>
 <header>
+
+
     <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Space-Tools</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
+
+            <ul class="nav navbar-nav">
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" ng-controller="navProcessing">Combat Stats<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Pilot Stats</a></li>
+                        <li><a href="#">Corp Stats</a></li>
+                        <li><a href="#">Alliance Stats</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </nav>
+
+
+
+<!--    <nav class="navbar navbar-default" role="navigation">
 
         <div class="navbar-header">
             <a class="navbar-brand" ui-sref="km-tools">Space-Tools</a>
         </div>
 
-        <div class="btn-group" ng-controller="navProcessing" dropdown is-open="status.isopen">
-            <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle>
-                Kill-Mail Tools <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-                <li><a ui-sref="km-tools.pilotStats">Pilot Killboard</a></li>
-                <li><a ui-sref="km-tools.corpStats">Corp Killboard</a></li>
-                <li><a ui-sref="km-tools.allianceStats">Alliance Killboard</a></li>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+            <ul class="nav navbar-nav">
 
-            </ul>
-        </div>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown open">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                </ul>
+            </div>
 
-    </nav>
+        &lt;!&ndash;<div class="btn-group" ng-controller="navProcessing" dropdown is-open="status.isopen">&ndash;&gt;
+            &lt;!&ndash;<button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle>&ndash;&gt;
+                &lt;!&ndash;Kill-Mail Tools <span class="caret"></span>&ndash;&gt;
+            &lt;!&ndash;</button>&ndash;&gt;
+            &lt;!&ndash;<ul class="dropdown-menu" role="menu">&ndash;&gt;
+                &lt;!&ndash;<li><a ui-sref="km-tools.pilotStats">Pilot Killboard</a></li>&ndash;&gt;
+                &lt;!&ndash;<li><a ui-sref="km-tools.corpStats">Corp Killboard</a></li>&ndash;&gt;
+                &lt;!&ndash;<li><a ui-sref="km-tools.allianceStats">Alliance Killboard</a></li>&ndash;&gt;
+            &lt;!&ndash;</ul>&ndash;&gt;
+        &lt;!&ndash;</div>&ndash;&gt;
+
+    </nav>-->
 </header>
 
     <div ui-view></div>

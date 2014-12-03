@@ -16,13 +16,13 @@
 
         <tr ng-repeat="kill in Losses.pilot | filter:searchText">
             <td class="Character">
-                <img ng-src="https://image.eveonline.com/Character/{{kill.victim.characterID}}_64.jpg">{{kill.victim.characterName}}</td>
+                <img ng-src="https://image.eveonline.com/Character/{{kill.victim.characterID}}_32.jpg">{{kill.victim.characterName}}</td>
             <td class="Alliance">
-                <img ng-src="https://image.eveonline.com/Alliance/{{kill.victim.allianceID}}_64.png">{{kill.victim.allianceName}}</td>
+                <img ng-src="https://image.eveonline.com/Alliance/{{kill.victim.allianceID}}_32.png">{{kill.victim.allianceName}}</td>
             <td class="Corp">
-                <img ng-src="https://image.eveonline.com/Corporation/{{kill.victim.corporationID}}_64.png">{{kill.victim.corporationName}}</td>
+                <img ng-src="https://image.eveonline.com/Corporation/{{kill.victim.corporationID}}_32.png">{{kill.victim.corporationName}}</td>
             <td class="Ship-type">
-                <img ng-src="https://image.eveonline.com/Render/{{kill.victim.shipTypeID}}_64.png">{{Losses.typeNames[kill.victim.shipTypeID].name}}</td>
+                <img ng-src="https://image.eveonline.com/Render/{{kill.victim.shipTypeID}}_32.png">{{Losses.typeNames[kill.victim.shipTypeID].name}}</td>
             <td>{{kill.zkb.totalValue | number : 0}}</td>
         </tr>
     </table>
