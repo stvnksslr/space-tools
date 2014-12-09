@@ -18,30 +18,20 @@
 
         var module = angular.module(moduleName, angularDependencies);
 
-        function navProcessing($scope, $http, $q) {
+        module.controller('MainCtrl', function($scope) {
+            $scope.name = 'World';
+        });
 
-            $scope.status = {
-                isopen: false
-            };
+        module.controller('DropdownCtrl', function($scope) {
 
-            $scope.toggled = function(open) {
-                $log.log('Dropdown is now: ', open);
-            };
+            $scope.items = [
+                "The first choice!",
+                "And another choice for you.",
+                "but wait! A third!"
+            ];
+        });
 
-            $scope.toggleDropdown = function($event) {
-                $event.preventDefault();
-                $event.stopPropagation();
-                $scope.status.isopen = !$scope.status.isopen;
-            };
-
-        }
-
-        function navProcessing($scope,$http,$q) {
-
-        }
-
-
-        module.controller('navProcessing', ['$scope', '$http', '$q', navProcessing]);
+        module.controller('navProcessing', ['$scope', '$http', '$q']);
         console.log('Nav Bar Loaded');
         return module;
     });
