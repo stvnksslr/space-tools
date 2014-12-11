@@ -3,14 +3,22 @@
  */
 
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
+var gulp = require('gulp'),
+    sass = require('gulp-ruby-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    minifycss = require('gulp-minify-css'),
+    rename = require('gulp-rename'),
+    notify = require('gulp-notify'),
+    uglify = require('gulp-uglify');
 
-gulp.task('default', function() {
+
+
+    gulp.task('default', function() {
+
 });
 
-gulp.task('sass', function () {
-    gulp.src('./scss/*.scss')
-        .pipe(sass())
-        .pipe(gulp.dest('./css'));
+gulp.task('styles', function() {
+    return gulp.src('app.scss')
+        .pipe(sass({ style: 'expanded' }))
 });
+
