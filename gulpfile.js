@@ -13,9 +13,7 @@ var gulp = require('gulp'),
 
 
 
-    gulp.task('default', function() {
-
-});
+    gulp.task('default', ['styles']);
 
 gulp.task('styles', function() {
     return gulp.src('./app/app.scss')
