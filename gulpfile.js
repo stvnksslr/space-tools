@@ -18,7 +18,8 @@ var gulp = require('gulp'),
 });
 
 gulp.task('styles', function() {
-    return gulp.src('app.scss')
+    return gulp.src('./app/app.scss')
         .pipe(sass({ style: 'expanded' }))
+        .pipe(gulp.dest('app/'));
 });
 
