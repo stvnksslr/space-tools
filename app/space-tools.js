@@ -1,3 +1,7 @@
+/**
+ * Created by skessler on 12/11/14.
+ */
+
 (function() {
     'use strict';
 
@@ -8,7 +12,7 @@
         'require',
         'angular',
         './router',
-        './../navbar',
+        './navbar',
         './km-tools/km-tools'
     ], function(require, angular) {
 

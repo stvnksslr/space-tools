@@ -45,4 +45,6 @@
         console.log('Nav Bar Loaded');
         return module;
     });
-})();
+})();/**
+ * Created by skessler on 12/11/14.
+ */

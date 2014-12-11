@@ -1,18 +1,24 @@
 {
-  "name": "spacetools",
-  "version": "0.0.0",
-  "description": "a series of tools for the space gamne eve online",
+  "name": "spaceTools",
+  "version": "1.0.0",
+  "description": "A series of tools for the game eve online aimed at improving the avaergae players experience.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "private": true,
-  "license": "BSD-2-Clause",
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-requirejs": "~0.4.4",
-    "grunt-contrib-sass": "^0.8.1",
-    "grunt-contrib-watch": "^0.6.1"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stvnksslr/spaceTools.git"
+  },
+  "author": "stvnksslr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stvnksslr/spaceTools/issues"
+  },
+  "homepage": "https://github.com/stvnksslr/spaceTools",
+  "dependencies": {
+    "gulp": "^3.8.10",
+    "gulp-require": "^0.1.4",
+    "gulp-sass": "^1.2.4"
   }
 }
