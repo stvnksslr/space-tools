@@ -12,35 +12,30 @@
 </head>
 
 <body>
-<header>
 
+<div class="navbar navbar-default">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Space-Tools</a>
+    </div>
+    <div class="navbar-collapse collapse NavBarCtrl">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Km-Tools<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
 
-    <nav class="navbar navbar-default" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Space-Tools</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
-
-            <ul class="nav navbar-nav">
-
-                <li class="dropdown">
-                    <a  class="dropdown-toggle" ng-controller="navProcessing">Combat Stats<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Pilot Stats</a></li>
-                        <li><a href="#">Corp Stats</a></li>
-                        <li><a href="#">Alliance Stats</a></li>
-                    </ul>
-                </li>
-
-            </ul>
-
-        </div>
-    </nav>
-
-</header>
 
 <div ui-view></div>
 </body>

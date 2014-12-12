@@ -18,33 +18,13 @@
 
         var module = angular.module(moduleName, angularDependencies);
 
-        function navProcessing($scope, $http, $q) {
-
-            $scope.status = {
-                isopen: false
-            };
-
-            $scope.toggled = function(open) {
-                $log.log('Dropdown is now: ', open);
-            };
-
-            $scope.toggleDropdown = function($event) {
-                $event.preventDefault();
-                $event.stopPropagation();
-                $scope.status.isopen = !$scope.status.isopen;
-            };
-
-        }
-
-        function navProcessing($scope,$http,$q) {
-
+        function NavBarCtrl($scope) {
+            $scope.isCollapsed = true;
         }
 
 
-        module.controller('navProcessing', ['$scope', '$http', '$q', navProcessing]);
+        module.controller('navProcessing', ['$scope', '$http', '$q', NavBarCtrl]);
         console.log('Nav Bar Loaded');
         return module;
     });
-})();/**
- * Created by skessler on 12/11/14.
- */
+})();
