@@ -11,7 +11,7 @@
 
     define([
         'require',
-        'angular',
+        'bower_components/angular/angular',
         'ui.router',
         'ui.bootstrap'
     ], function(require, angular, uirouter, uiboostrap) {

@@ -12,7 +12,7 @@
         'require',
         'angular',
         './router',
-        './navbar',
+        './../navbar',
         './km-tools/km-tools'
     ], function(require, angular) {
 
