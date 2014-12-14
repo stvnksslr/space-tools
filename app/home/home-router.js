@@ -7,7 +7,7 @@
 
     var moduleName = 'space-tools.home-router',
 
-        angularDependencies = ['ui.router'];
+        angularDependencies = ['ui.router','space-tools.router'];
 
     define([
         'require',
