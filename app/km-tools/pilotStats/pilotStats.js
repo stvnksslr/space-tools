@@ -2,7 +2,6 @@
  * Created by skessler on 12/11/14.
  */
 
-
 (function() {
     'use strict';
     var moduleName = 'space-tools.km-tools.pilotStats',
