@@ -7,12 +7,13 @@
 
     var moduleName = 'space-tools.kmtools-router',
 
-        angularDependencies = ['ui.router'];
+        angularDependencies = ['ui.router','space-tools.km-tools.pilotStats'];
 
     define([
         'require',
         'angular',
-        'ui.router'
+        'ui.router',
+        './km-tools/pilotStats/pilotStats'
     ], function(require, angular, uirouter) {
 
         var module = angular.module(moduleName, angularDependencies);
