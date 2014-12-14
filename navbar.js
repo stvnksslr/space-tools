@@ -22,7 +22,6 @@
             $scope.isCollapsed = true;
         }
 
-
         module.controller('navProcessing', ['$scope', '$http', '$q', NavBarCtrl]);
         console.log('Nav Bar Loaded');
         return module;
