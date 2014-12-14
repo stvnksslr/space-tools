@@ -22,14 +22,14 @@
 
         module.config(function($stateProvider, $urlRouterProvider) {
 
-            $urlRouterProvider.otherwise('/km-tools');
+            $urlRouterProvider.otherwise('/home');
 
             $stateProvider
 
                 // HOME STATES AND NESTED VIEWS ========================================
-                .state('km-tools', {
-                    url: '/km-tools',
-                    templateUrl: require.toUrl('./km-tools/_km-tools.html')
+                .state('home', {
+                    url: '/home',
+                    templateUrl: require.toUrl('./home/_home.html')
                 })
 
                 // nested list with custom controller
