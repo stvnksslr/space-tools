@@ -12,7 +12,7 @@
         'require',
         'angular',
         'ui.router',
-        './pilotStats/pilotStats'
+        './km-tools/pilotStats/pilotStats'
     ], function(require, angular, uirouter) {
 
         var module = angular.module(moduleName, angularDependencies);

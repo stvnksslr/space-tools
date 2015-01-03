@@ -5,14 +5,15 @@
 (function() {
     'use strict';
 
-    var moduleName = 'space-tools.kmtools-router',
+    var moduleName = 'space-tools.kmTools-router',
 
-        angularDependencies = ['ui.router','space-tools.km-tools.pilotStats'];
+        angularDependencies = ['ui.router','space-tools.km-tools','space-tools.km-tools.pilotStats'];
 
     define([
         'require',
         'angular',
         'ui.router',
+        './km-tools/km-tools',
         './km-tools/pilotStats/pilotStats'
     ], function(require, angular, uirouter) {
 

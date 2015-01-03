@@ -14,8 +14,10 @@
         'require',
         'angular',
         'ui.router',
+        'router',
         './home/home',
         './km-tools/km-tools',
+        './km-tools/kmTools-router'
     ], function(require, angular, uirouter) {
 
         var module = angular.module(moduleName, angularDependencies);
