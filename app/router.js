@@ -8,18 +8,18 @@
 
     var moduleName = 'space-tools.router',
 
-        angularDependencies = ['ui.router'];
+        angularDependencies = ['ui.router','space-tools.navbar'];
 
     define([
         'require',
         'angular',
         'ui.router',
-        './home/home'
+        '../navbar'
     ], function(require, angular, uirouter) {
 
         var module = angular.module(moduleName, angularDependencies);
 
-/*        module.config(function($stateProvider, $urlRouterProvider) {
+        module.config(function($stateProvider, $urlRouterProvider) {
 
             $urlRouterProvider.otherwise('/home');
 
@@ -38,7 +38,7 @@
                     controller: function($scope) {
                     }
                 })
-        });*/
+        });
 
         return module;
     });

@@ -5,7 +5,7 @@
 (function() {
     'use strict';
 
-    var moduleName = 'space-tools.kmtools-router',
+    var moduleName = 'space-tools.kmTools-router',
 
         angularDependencies = ['ui.router'];
 
