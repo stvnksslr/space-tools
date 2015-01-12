@@ -6,30 +6,15 @@
     'use strict';
 
     var moduleName = 'space-tools',
-        angularDependencies = ['space-tools.km-tools','space-tools.router','space-tools.navbar'];
+        angularDependencies = ['space-tools.router'];
 
     define([
         'require',
         'angular',
-        './router',
-        './../navbar',
-        './km-tools/km-tools'
+        './router'
     ], function(require, angular) {
-
         var module = angular.module(moduleName, angularDependencies);
-
-
-        function MyController($scope) {
-            // Dont really need $scope for anything yet
-            this.someValue = 'Some Value!';
-        }
-
-        MyController.prototype.clearValue = function() {
-            this.someValue = '';
-        };
-
-        module.controller('MyController', ['$scope', MyController]);
-
+        module.controller('MyController', ['$scope']);
         return module;
     });
 })();

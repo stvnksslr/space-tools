@@ -8,21 +8,18 @@
 
     var moduleName = 'space-tools.router',
 
-        angularDependencies = ['ui.router', 'space-tools.km-tools','space-tools.home'];
+        angularDependencies = ['ui.router'];
 
     define([
         'require',
         'angular',
         'ui.router',
-        'router',
-        './home/home',
-        './km-tools/km-tools',
-        './km-tools/kmTools-router'
+        './home/home'
     ], function(require, angular, uirouter) {
 
         var module = angular.module(moduleName, angularDependencies);
 
-        module.config(function($stateProvider, $urlRouterProvider) {
+/*        module.config(function($stateProvider, $urlRouterProvider) {
 
             $urlRouterProvider.otherwise('/home');
 
@@ -41,7 +38,7 @@
                     controller: function($scope) {
                     }
                 })
-        });
+        });*/
 
         return module;
     });
