@@ -2,7 +2,7 @@ import * as angular from 'angular';
 import * as uiRouter from 'angular-ui-router';
 import * as fs from 'fs';
 
-var pilotStats = angular.module('space-tools.km-tools.pilot-stats', []);
+var pilotStats = angular.module('space-tools.km-tools.pilot-stats', ['ui.router']);
 
 function PilotStatsCtrl($scope, $http, $q) {
 
@@ -39,14 +39,13 @@ function PilotStatsCtrl($scope, $http, $q) {
 pilotStats.controller('PilotStatsCtrl', ['$scope', '$http', '$q', PilotStatsCtrl]);
 
 // Define the states we want to expose for this submodule
-pilotStats.config(['$stateProvider'], function($stateProvider) {
-    $stateProvider.state('km-tools.pilotStats', {
-        url: '/pilotStats',
-        template: fs.readFileSync(__dirname +'/pilotStats/_pilotStats.html'),
+pilotStats.config(['$stateProvider', function($stateProvider) {
+    $stateProvider.state('km-tools.pilot-stats', {
+        url: '/pilot-stats',
+        template: require('./_pilotStats.html'),
         controller: 'PilotStatsCtrl',
         controllerAs: 'PilotStats'
     });
-});
-
+}]);
 
 export default pilotStats;

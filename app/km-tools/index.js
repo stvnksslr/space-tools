@@ -3,7 +3,7 @@ import * as uiRouter from 'angular-ui-router';
 
 import './pilot-stats';
 
-var kmTools = angular.module('space-tools.km-tools', ['space-tools.km-tools.pilot-stats']);
+var kmTools = angular.module('space-tools.km-tools', ['ui.router', 'space-tools.km-tools.pilot-stats']);
 
 kmTools.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
