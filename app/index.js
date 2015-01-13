@@ -1,5 +1,5 @@
 import * as angular from 'angular';
-import * as uiRouter from 'ui.router';
+import * as uiRouter from 'angular-ui-router';
 
 import './navbar';
 import './km-tools'; // ooh look we are really importing ./km-tools/index.js

@@ -1,29 +1,16 @@
 /**
  * Created by skessler on 12/2/14.
  */
+import * as angular from 'angular';
+import * as uiRouter from 'angular-ui-router';
+import * as angularBootstrap from 'angular-ui-bootstrap';
 
-(function() {
-    'use strict';
+var spaceToolsNavbar = angular.module(moduleName, ['ui.router', 'ui.bootstrap']);
 
-    var moduleName = 'space-tools.navbar',
+function NavBarCtrl($scope) {
+    $scope.isCollapsed = true;
+}
 
-        angularDependencies = ['ui.router','ui.bootstrap'];
+spaceToolsNavbar.controller('navProcessing', ['$scope', '$http', '$q', NavBarCtrl]);
 
-    define([
-        'require',
-        'angular',
-        'ui.router',
-        'ui.bootstrap'
-    ], function(require, angular, uirouter, uiboostrap) {
-
-        var module = angular.module(moduleName, angularDependencies);
-
-        function NavBarCtrl($scope) {
-            $scope.isCollapsed = true;
-        }
-
-        module.controller('navProcessing', ['$scope', '$http', '$q', NavBarCtrl]);
-        console.log('Nav Bar Loaded');
-        return module;
-    });
-})();
+export default spaceToolsNavbar;
