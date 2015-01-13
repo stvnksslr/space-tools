@@ -4,7 +4,7 @@
  */
 import * as angular from 'angular';
 
-var pilotStatDirectives = angular.module(moduleName, angularDependencies);
+var pilotStatDirectives = angular.module('space-tools.km-tools.pilot-stats.directives', []);
 
 // pilotStatDirectives.directive('pilotStats', function() {
 //     return {

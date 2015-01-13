@@ -1,7 +1,7 @@
 import * as angular from 'angular';
-import * as uiRouter from 'uiRouter';
+import * as uiRouter from 'angular-ui-router';
 
-import './pilotStats';
+import './pilot-stats';
 
 var kmTools = angular.module('space-tools.km-tools', ['space-tools.km-tools.pilot-stats']);
 

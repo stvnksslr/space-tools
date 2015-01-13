@@ -1,4 +1,5 @@
 import * as angular from 'angular';
+import * as uiRouter from 'angular-ui-router';
 import * as fs from 'fs';
 
 var pilotStats = angular.module('space-tools.km-tools.pilot-stats', []);
