@@ -28,8 +28,11 @@ gulp.task('default', ['styles', 'watch:all']);
 
 gulp.task('6to5', function() {
 
-    gulp.src(['./index.html', 'app/*.html', 'app/**/*.html'])
+    gulp.src(['index.html'])
         .pipe(gulp.dest('.es5/'));
+
+    gulp.src(['app/*.html', 'app/**/*.html', 'app/**/*.json'])
+        .pipe(gulp.dest('.es5/app'));
 
     return gulp.src(['app/**/*.js', 'app/*.js'])
         .pipe(to5())
@@ -52,11 +55,15 @@ gulp.task('watch:build', ['6to5'], function() {
         entries: './app/index.js'
     }));
 
+
     bundler.on('update', rebundle);
 
     function rebundle() {
         gulp.src(['.es5/index.html'])
             .pipe(gulp.dest('./build/'));
+
+        gulp.src(['.es5/**/*.json'])
+            .pipe(gulp.dest('.es5/app'));
 
         return bundler
             .bundle()
