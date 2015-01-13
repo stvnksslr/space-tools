@@ -27,9 +27,9 @@ gulp.task('default', ['styles', 'watch:all']);
 
 
 gulp.task('6to5', function() {
-    return gulp.src('app/**/*.js')
+    return gulp.src(['app/**/*.js', 'app/*.js'])
         .pipe(to5())
-        .pipe(gulp.dest('.es5/'));
+        .pipe(gulp.dest('.es5/app'));
 });
 
 
