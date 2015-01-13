@@ -20,7 +20,7 @@
         module.config(function($stateProvider, $urlRouterProvider) {
 
             $urlRouterProvider.otherwise('/home');
-
+            console.log("im here and im a log get used it bub")
             $stateProvider
 
                 // nested list with custom controller
