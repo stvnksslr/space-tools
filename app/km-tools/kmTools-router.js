@@ -30,6 +30,7 @@
                     // You can simply add it inline here.
                     template: '<ui-view/>'
                 })
+
                 .state('km-tools.pilotStats', {
                     url: '/pilotStats',
                     templateUrl: require.toUrl('./pilotStats/_pilotStats.html'),
