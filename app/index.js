@@ -2,10 +2,10 @@ import * as angular from 'angular';
 import * as uiRouter from 'ui.router';
 
 import './navbar';
-import './km-tools/kmTools-router';
+import './km-tools'; // ooh look we are really importing ./km-tools/index.js
 
 // Here we define the base space-tools app, this is the core of everything!
-var spaceTools = angular.module('space-tools', ['navbar', 'kmTools-router']);
+var spaceTools = angular.module('space-tools', ['navbar', 'space-tools.km-tools']);
 
 spaceTools.config(['$stateProvider', '$urlRouteProvider', function($stateProvider, $urlRouterProvider) {
 
