@@ -20,10 +20,16 @@
         module.config(function($stateProvider, $urlRouterProvider) {
 
             $urlRouterProvider.otherwise('/home');
-            console.log("im here and im a log get used it bub")
             $stateProvider
 
-                // nested list with custom controller
+                .state('km-tools', {
+                    abstract: true,
+                    url: '/km-tools',
+
+                    // Note: abstract still needs a ui-view for its children to populate.
+                    // You can simply add it inline here.
+                    template: '<ui-view/>'
+                })
                 .state('km-tools.pilotStats', {
                     url: '/pilotStats',
                     templateUrl: require.toUrl('./pilotStats/_pilotStats.html'),
