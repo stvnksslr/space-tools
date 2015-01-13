@@ -27,11 +27,14 @@ gulp.task('default', ['styles', 'watch:all']);
 
 
 gulp.task('6to5', function() {
+
+    gulp.src(['./index.html', 'app/*.html', 'app/**/*.html'])
+        .pipe(gulp.dest('.es5/'));
+
     return gulp.src(['app/**/*.js', 'app/*.js'])
         .pipe(to5())
         .pipe(gulp.dest('.es5/app'));
 });
-
 
 gulp.task('watch:6to5', ['6to5'], function() {
     return watch('src/**/*.js', function(files) {
@@ -52,10 +55,13 @@ gulp.task('watch:build', ['6to5'], function() {
     bundler.on('update', rebundle);
 
     function rebundle() {
+        gulp.src(['.es5/index.html'])
+            .pipe(gulp.dest('./build/'));
+
         return bundler
             .bundle()
             .pipe(source('index.js'))
-            .pipe(gulp.dest('./build/eve-view/'));
+            .pipe(gulp.dest('./build/app/'));
     }
 
     return rebundle();

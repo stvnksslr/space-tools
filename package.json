@@ -28,7 +28,9 @@
     "gulp-notify": "^2.1.0",
     "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "^0.7.1",
-    "gulp-uglify": "^1.0.2"
+    "gulp-uglify": "^1.0.2",
+    "browserify-shim": "~3.8.2",
+    "angular-bootstrap": "~0.12.0"
   },
   "devDependencies": {
     "gulp": "~3.8.10",

@@ -3,7 +3,7 @@
  */
 import * as angular from 'angular';
 import * as uiRouter from 'angular-ui-router';
-import * as angularBootstrap from 'angular-ui-bootstrap';
+import * as angularBootstrap from 'angular-bootstrap';
 
 var spaceToolsNavbar = angular.module(moduleName, ['ui.router', 'ui.bootstrap']);
 
