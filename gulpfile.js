@@ -62,8 +62,8 @@ gulp.task('watch:build', ['6to5'], function() {
         gulp.src(['.es5/index.html'])
             .pipe(gulp.dest('./build/'));
 
-        gulp.src(['.es5/**/*.json'])
-            .pipe(gulp.dest('.es5/app'));
+        gulp.src(['.es5/app/**/*.json'])
+            .pipe(gulp.dest('./build/app'));
 
         return bundler
             .bundle()
