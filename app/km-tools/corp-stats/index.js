@@ -7,7 +7,7 @@ import * as fs from 'fs';
 
 var corpStats = angular.module('space-tools.km-tools.corp-stats', ['ui.router']);
 
-function PilotStatsCtrl($scope, $http, $q) {
+function CorpStatsCtrl($scope, $http, $q) {
 
     var loadAlliance = $http.get('https://zkillboard.com/api/losses/no-attackers/allianceID/1354830081/'),
         loadCorp = $http.get('https://zkillboard.com/api/losses/no-attackers/corporation/98342574/'),
