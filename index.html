@@ -1,34 +1,37 @@
 <!-- index.tml created by skessler-->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="space-tools">
 <link rel="stylesheet" href="app/app.css">
 
 <head>
     <meta charset="utf-8">
     <title>Welcome to Space Tools!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script data-main="app/main.js" src="bower_components/requirejs/require.js"></script>
+    <script src="app/index.js"></script>
 </head>
 
 <body>
 
-<div class="navbar navbar-default">
-    <div class="navbar-header">
-        <a class="navbar-brand" ui-sref="home">Space-Tools</a>
-    </div>
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="home">Space-Tools</a>
+        </div>
 
-    <div class="btn-group" dropdown is-open="status.isopen">
+        <div class="btn-group" dropdown is-open="status.isopen">
             <button type="button" class="btn btn-primary dropdown-toggle navbar-btn" dropdown-toggle ng-disabled="disabled">Km-Tools</button>
-        <ul class="dropdown-menu" role="menu">
-            <li><a ui-sref="km-tools.pilotStats">Pilot Statistics</a></li>
-            <li><a ui-sref="#">Corp Statistics</a></li>
-            <li><a ui-sref="#">Alliance Statistics</a></li>
-        </ul>
+            <ul class="dropdown-menu" role="menu">
+                <li><a ui-sref="km-tools.pilot-stats">Pilot Statistics</a>
+                </li>
+                <li><a ui-sref="km-tools.corp-stats">Corp Statistics</a>
+                </li>
+                <li><a ui-sref="#">Alliance Statistics</a>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
 
-<div ui-view></div>
+    <div ui-view></div>
 </body>
-</html>
 
+</html>
