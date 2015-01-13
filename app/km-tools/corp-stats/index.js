@@ -5,7 +5,7 @@ import * as angular from 'angular';
 import * as uiRouter from 'angular-ui-router';
 import * as fs from 'fs';
 
-var pilotStats = angular.module('space-tools.km-tools.corp-stats', ['ui.router']);
+var corpStats = angular.module('space-tools.km-tools.corp-stats', ['ui.router']);
 
 function PilotStatsCtrl($scope, $http, $q) {
 
@@ -43,17 +43,17 @@ function PilotStatsCtrl($scope, $http, $q) {
 
 }
 
-// Register out PilotStatsCtrl
-pilotStats.controller('CorpStatsCtrl', ['$scope', '$http', '$q', CorpStatsCtrl]);
+// Register out corpStatsCtrl
+corpStats.controller('CorpStatsCtrl', ['$scope', '$http', '$q', CorpStatsCtrl]);
 
 // Define the states we want to expose for this submodule
-pilotStats.config(['$stateProvider', function($stateProvider) {
+corpStats.config(['$stateProvider', function($stateProvider) {
     $stateProvider.state('km-tools.corp-stats', {
         url: '/corp-stats',
-        template: require('./_corpStats.html'),
+        template: require('./km-tools/corp-stats/_corp-stats.html'),
         controller: 'corpStatsCtrl',
         controllerAs: 'CorpStats'
     });
 }]);
 
-export default pilotStats;
+export default corpStats;

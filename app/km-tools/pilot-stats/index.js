@@ -42,7 +42,7 @@ pilotStats.controller('PilotStatsCtrl', ['$scope', '$http', '$q', PilotStatsCtrl
 pilotStats.config(['$stateProvider', function($stateProvider) {
     $stateProvider.state('km-tools.pilot-stats', {
         url: '/pilot-stats',
-        template: require('./_pilotStats.html'),
+        template: require('./km-tools/pilot-stats/_pilot-stats.html'),
         controller: 'PilotStatsCtrl',
         controllerAs: 'PilotStats'
     });
