@@ -34,11 +34,12 @@
                 .state('km-tools.pilotStats', {
                     url: '/pilotStats',
                     templateUrl: require.toUrl('./pilotStats/_pilotStats.html'),
-                    controller: function($scope) {
-                    }
+                    controller: 'LossesCtrl',
+                    controllerAs: 'Losses'
                 })
         });
 
         return module;
     });
 })();
+
