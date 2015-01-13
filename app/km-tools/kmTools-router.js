@@ -17,6 +17,21 @@
 
         var module = angular.module(moduleName, angularDependencies);
 
+        module.config(function($stateProvider, $urlRouterProvider) {
+
+            $urlRouterProvider.otherwise('/home');
+
+            $stateProvider
+
+                // nested list with custom controller
+                .state('km-tools.pilotStats', {
+                    url: '/pilotStats',
+                    templateUrl: require.toUrl('./km-tools/pilotStats/_pilotStats.html'),
+                    controller: function($scope) {
+                    }
+                })
+        });
+
         return module;
     });
 })();
