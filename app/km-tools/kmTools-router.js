@@ -7,7 +7,7 @@
 
     var moduleName = 'space-tools.kmTools-router',
 
-        angularDependencies = ['ui.router', 'space-tools.km-tools.pilotStats'];
+        angularDependencies = ['ui.router', 'space-tools.km-tools', 'space-tools.km-tools.pilotStats'];
 
     define([
         'require',
