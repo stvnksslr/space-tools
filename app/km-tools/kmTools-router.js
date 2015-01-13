@@ -13,7 +13,7 @@
         'require',
         'angular',
         'ui.router',
-        '/km-tools',
+        './km-tools',
         './pilotStats/pilotStats'
 
     ], function(require, angular, uirouter) {
