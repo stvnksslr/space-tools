@@ -3,7 +3,7 @@ build/
 bower_components/
 node_modules/
 .idea/
-
+.es5/
 spaceTools.iml
 app/app.css.map
 npm-debug.log
