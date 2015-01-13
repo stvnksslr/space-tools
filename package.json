@@ -1,59 +1,75 @@
 {
-  "name": "spaceTools",
-  "version": "1.0.0",
-  "description": "A series of tools for the game eve online aimed at improving the avaergae players experience.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/stvnksslr/spaceTools.git"
-  },
-  "author": "stvnksslr",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/stvnksslr/spaceTools/issues"
-  },
-  "homepage": "https://github.com/stvnksslr/spaceTools",
-  "dependencies": {
-    "del": "^1.1.0",
-    "gulp-autoprefixer": "^2.0.0",
-    "gulp-cache": "^0.2.4",
-    "gulp-concat": "^2.4.2",
-    "gulp-imagemin": "^2.0.0",
-    "gulp-jshint": "^1.9.0",
-    "gulp-livereload": "^2.1.1",
-    "gulp-minify-css": "^0.3.11",
-    "gulp-notify": "^2.1.0",
-    "gulp-rename": "^1.2.0",
-    "gulp-ruby-sass": "^0.7.1",
-    "gulp-uglify": "^1.0.2",
-    "browserify-shim": "~3.8.2",
-    "angular-bootstrap": "~0.12.0"
-  },
-  "devDependencies": {
-    "gulp": "~3.8.10",
-    "angular": "~1.3.3",
-    "lodash": "~2.4.1",
-    "browserify": "~6.3.2",
-    "watchify": "~2.1.1",
-    "vinyl-source-stream": "~1.0.0",
-    "gulp-watch": "~2.0.0",
-    "browserify-shim": "~3.8.0",
-    "es6-promise": "~2.0.0",
-    "karma": "~0.12.25",
-    "karma-mocha": "~0.1.9",
-    "mocha": "~2.0.1",
-    "chai": "~1.10.0",
-    "karma-chai": "~0.1.0",
-    "karma-phantomjs-launcher": "~0.1.4",
-    "karma-browserify": "~1.0.0",
-    "requirejs": "~2.1.15",
-    "karma-requirejs": "~0.2.2",
-    "6to5-browserify": "~1.3.0",
-    "gulp-6to5": "~2.0.0",
-    "6to5": "~2.11.3",
-    "angular-ui-router": "~0.2.13"
-  }
+    "name": "spaceTools",
+    "version": "1.0.0",
+    "description": "A series of tools for the game eve online aimed at improving the avaergae players experience.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/stvnksslr/spaceTools.git"
+    },
+    "author": "stvnksslr",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/stvnksslr/spaceTools/issues"
+    },
+    "browserify": {
+        "transform": [
+            "browserify-shim"
+        ]
+    },
+    "browser": {
+        "angular": "./node_modules/angular/angular.js",
+        "angular-ui-router": "./node_modules/angular-ui-router/release/angular-ui-router.js",
+        "angular-bootstrap": "./node_modules/angular-bootstrap/dist/ui-bootstrap-tpls.js"
+
+    },
+    "browserify-shim": {
+        "angular": "angular",
+        "angular-ui-router": "angular-ui-router",
+        "angular-bootstrap": "angular-bootstrap"
+    },
+    "homepage": "https://github.com/stvnksslr/spaceTools",
+    "dependencies": {
+        "del": "^1.1.0",
+        "gulp-autoprefixer": "^2.0.0",
+        "gulp-cache": "^0.2.4",
+        "gulp-concat": "^2.4.2",
+        "gulp-imagemin": "^2.0.0",
+        "gulp-jshint": "^1.9.0",
+        "gulp-livereload": "^2.1.1",
+        "gulp-minify-css": "^0.3.11",
+        "gulp-notify": "^2.1.0",
+        "gulp-rename": "^1.2.0",
+        "gulp-ruby-sass": "^0.7.1",
+        "gulp-uglify": "^1.0.2",
+        "browserify-shim": "~3.8.2",
+        "angular-bootstrap": "~0.12.0"
+    },
+    "devDependencies": {
+        "gulp": "~3.8.10",
+        "angular": "~1.3.3",
+        "lodash": "~2.4.1",
+        "browserify": "~6.3.2",
+        "watchify": "~2.1.1",
+        "vinyl-source-stream": "~1.0.0",
+        "gulp-watch": "~2.0.0",
+        "browserify-shim": "~3.8.0",
+        "es6-promise": "~2.0.0",
+        "karma": "~0.12.25",
+        "karma-mocha": "~0.1.9",
+        "mocha": "~2.0.1",
+        "chai": "~1.10.0",
+        "karma-chai": "~0.1.0",
+        "karma-phantomjs-launcher": "~0.1.4",
+        "karma-browserify": "~1.0.0",
+        "requirejs": "~2.1.15",
+        "karma-requirejs": "~0.2.2",
+        "6to5-browserify": "~1.3.0",
+        "gulp-6to5": "~2.0.0",
+        "6to5": "~2.11.3",
+        "angular-ui-router": "~0.2.13"
+    }
 }
