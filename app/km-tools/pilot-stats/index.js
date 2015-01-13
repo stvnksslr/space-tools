@@ -42,7 +42,7 @@ pilotStats.controller('PilotStatsCtrl', ['$scope', '$http', '$q', PilotStatsCtrl
 pilotStats.config(['$stateProvider'], function($stateProvider) {
     $stateProvider.state('km-tools.pilotStats', {
         url: '/pilotStats',
-        template: fs.readFileSync(__dirname +'./pilotStats/_pilotStats.html'),
+        template: fs.readFileSync(__dirname +'/pilotStats/_pilotStats.html'),
         controller: 'PilotStatsCtrl',
         controllerAs: 'PilotStats'
     });

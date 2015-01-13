@@ -69,14 +69,21 @@ gulp.task('watch:build', ['6to5'], function() {
 
 gulp.task('watch:all', ['watch:6to5', 'watch:build']);
 
-
 gulp.task('styles', function() {
     return gulp.src('./app/app.scss')
         .pipe(sass({
             style: 'expanded'
         }))
-        .pipe(gulp.dest('app/'));
+        .pipe(gulp.dest('build/app'));
 });
+
+// gulp.task('styles', function() {
+//     return gulp.src('./app/app.scss')
+//         .pipe(sass({
+//             style: 'expanded'
+//         }))
+//         .pipe(gulp.dest('app/'));
+// });
 
 gulp.task('test', function() {
     return gulp.src('./app/app.scss')

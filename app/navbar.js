@@ -5,7 +5,7 @@ import * as angular from 'angular';
 import * as uiRouter from 'angular-ui-router';
 import * as angularBootstrap from 'angular-bootstrap';
 
-var spaceToolsNavbar = angular.module(moduleName, ['ui.router', 'ui.bootstrap']);
+var spaceToolsNavbar = angular.module('space-tools.navbar', ['ui.router', 'ui.bootstrap']);
 
 function NavBarCtrl($scope) {
     $scope.isCollapsed = true;
