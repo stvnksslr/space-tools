@@ -5,7 +5,7 @@ import './pilotStats';
 
 var kmTools = angular.module('space-tools.km-tools', ['space-tools.km-tools.pilot-stats']);
 
-kmTools.config(function($stateProvider, $urlRouterProvider) {
+kmTools.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/home');
     $stateProvider.state('km-tools', {
@@ -16,7 +16,6 @@ kmTools.config(function($stateProvider, $urlRouterProvider) {
         template: '<ui-view/>'
     });
 
-});
-
+}]);
 
 export default kmTools;

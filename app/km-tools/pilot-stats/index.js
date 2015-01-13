@@ -1,8 +1,9 @@
 import * as angular from 'angular';
+import * as fs from 'fs';
 
 var pilotStats = angular.module('space-tools.km-tools.pilot-stats', []);
 
-function LossesCtrl($scope, $http, $q) {
+function PilotStatsCtrl($scope, $http, $q) {
 
     var loadAlliance = $http.get('https://zkillboard.com/api/losses/no-attackers/allianceID/1354830081/'),
         loadPilot = $http.get('https://zkillboard.com/api/kills/characterID/1564471258/'),
@@ -33,8 +34,18 @@ function LossesCtrl($scope, $http, $q) {
 
 }
 
-console.log('km-tools has loaded!');
+// Register out PilotStatsCtrl
+pilotStats.controller('PilotStatsCtrl', ['$scope', '$http', '$q', PilotStatsCtrl]);
 
-pilotStats.controller('LossesCtrl', ['$scope', '$http', '$q', LossesCtrl]);
+// Define the states we want to expose for this submodule
+pilotStats.config(['$stateProvider'], function($stateProvider) {
+    $stateProvider.state('km-tools.pilotStats', {
+        url: '/pilotStats',
+        template: fs.readFileSync(__dirname +'./pilotStats/_pilotStats.html'),
+        controller: 'PilotStatsCtrl',
+        controllerAs: 'PilotStats'
+    });
+});
+
 
 export default pilotStats;

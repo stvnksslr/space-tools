@@ -5,9 +5,9 @@ import './navbar';
 import './km-tools/kmTools-router';
 
 // Here we define the base space-tools app, this is the core of everything!
-var mod = angular.module('space-tools', ['navbar', 'kmTools-router']);
+var spaceTools = angular.module('space-tools', ['navbar', 'kmTools-router']);
 
-mod.config(['$stateProvider', '$urlRouteProvider', function($stateProvider, $urlRouterProvider) {
+spaceTools.config(['$stateProvider', '$urlRouteProvider', function($stateProvider, $urlRouterProvider) {
 
     // HOME STATES AND NESTED VIEWS ========================================
     $stateProvider
@@ -21,3 +21,5 @@ mod.config(['$stateProvider', '$urlRouteProvider', function($stateProvider, $url
 
 // we might want to change this to be an indocument bootstrap
 angular.bootstrap(document.querySelector('html'), ['space-tools']);
+
+export default spaceTools;
