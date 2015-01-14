@@ -24,8 +24,7 @@
     "angular-bootstrap": "~0.12.0",
     "angular-ui": "~0.4.0",
     "bootstrap-sass-official": "~3.3.1",
-    "bootswatch-scss": "~3.2.0",
-    "bootswatch-sass": "~3.3.1"
+    "bootswatch-scss": "~3.2.0"
   },
   "resolutions": {
     "bootstrap-sass-official": "~3.3.1",
