@@ -1,10 +1,10 @@
 // Core variables and mixins
-@import "../node_modules/bootswatch-scss/flatly/variables";
+@import "../bower_components/bootswatch-scss/flatly/variables";
 // @import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/_variables";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap";
-@import "../node_modules/bootswatch-scss/flatly/bootswatch";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap";
+@import "../bower_components/bootswatch-scss/flatly/bootswatch";
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
 
 // Utility classes
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
-@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/utilities";
+@import "../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/responsive-utilities";
