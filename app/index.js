@@ -15,7 +15,7 @@ spaceTools.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     $stateProvider
         .state('home', {
         url: '/home',
-        template: require('./home/_home.html')
+        template: require('./_home.html')
     });
 }]);
 
