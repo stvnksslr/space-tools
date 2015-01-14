@@ -19,17 +19,29 @@
         </div>
 
         <div class="btn-group" dropdown is-open="status.isopen">
-            <button type="button" class="btn btn-primary dropdown-toggle navbar-btn" dropdown-toggle ng-disabled="disabled">Km-Tools</button>
-            <ul class="dropdown-menu" role="menu">
-                <li><a ui-sref="km-tools.pilot-stats">Pilot Statistics</a>
-                </li>
-                <li><a ui-sref="km-tools.corp-stats">Corp Statistics</a>
-                </li>
-                <li><a ui-sref="#">Alliance Statistics</a>
-                </li>
-            </ul>
-        </div>
+        <button type="button" class="btn btn-primary dropdown-toggle navbar-btn" dropdown-toggle ng-disabled="disabled">Km-Tools</button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a ui-sref="km-tools.pilot-stats">Pilot Statistics</a>
+            </li>
+            <li><a ui-sref="km-tools.corp-stats">Corp Statistics</a>
+            </li>
+            <li><a ui-sref="#">Alliance Statistics</a>
+            </li>
+        </ul>
     </div>
+    </div>
+
+    <div class="btn-group2" dropdown is-open="status.isopen">
+        <button type="button" class="btn btn-primary dropdown-toggle navbar-btn" dropdown-toggle ng-disabled="disabled">Assets</button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a ui-sref="#">Pilot Assets</a>
+            </li>
+            <li><a ui-sref="#">Corp Assets</a>
+            </li>
+        </ul>
+    </div>
+
+
 
     <div ui-view></div>
 </body>
