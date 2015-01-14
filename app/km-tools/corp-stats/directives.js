@@ -9,13 +9,4 @@ import * as angular from 'angular';
 
 var corpStatDirectives = angular.module('space-tools.km-tools.corp-stats.directives', []);
 
-// pilotStatDirectives.directive('pilotStats', function() {
-//     return {
-//         controller: function($scope) {
-//             this.pilot;
-//         }
-//     };
-// });
-
-
 export default corpStatDirectives;
