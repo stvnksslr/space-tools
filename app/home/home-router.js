@@ -5,7 +5,7 @@
 (function() {
     'use strict';
 
-    var moduleName = 'space-tools.home-router',
+    var moduleName = 'space-toolsw.home-router',
 
         angularDependencies = ['ui.router'];
 

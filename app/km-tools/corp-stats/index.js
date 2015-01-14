@@ -50,7 +50,7 @@ corpStats.controller('CorpStatsCtrl', ['$scope', '$http', '$q', CorpStatsCtrl]);
 corpStats.config(['$stateProvider', function($stateProvider) {
     $stateProvider.state('km-tools.corp-stats', {
         url: '/corp-stats',
-        template: require('./km-tools/corp-stats/_corp-stats.html'),
+        template: require('./_corp-stats.html'),
         controller: 'corpStatsCtrl',
         controllerAs: 'CorpStats'
     });
