@@ -12,42 +12,37 @@
 </head>
 
 <body>
-
     <div class="navbar navbar-default">
         <div class="navbar-header">
             <a class="navbar-brand" ui-sref="home">Space-Tools</a>
         </div>
 
         <div class="btn-group" dropdown is-open="status.isopen">
-        <button type="button" class="btn btn-primary dropdown-toggle navbar-btn" dropdown-toggle ng-disabled="disabled">Km-Tools</button>
-        <ul class="dropdown-menu" role="menu">
-            <li><a ui-sref="km-tools.pilot-stats">Search</a>
-            </li>
-            <li><a ui-sref="km-tools.pilot-stats">Pilot Statistics</a>
-            </li>
-            <li><a ui-sref="km-tools.corp-stats">Corp Statistics</a>
-            </li>
-            <li><a ui-sref="#">Alliance Statistics</a>
-            </li>
-            <li><a ui-sref="#">Battle Report Fixer</a>
-            </li>
-        </ul>
+            <button type="button" class="btn btn-primary dropdown-toggle navbar-btn" dropdown-toggle ng-disabled="disabled">Km-Tools</button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a ui-sref="km-tools.pilot-stats">Search</a>
+                </li>
+                <li><a ui-sref="km-tools.pilot-stats">Pilot Statistics</a>
+                </li>
+                <li><a ui-sref="km-tools.corp-stats">Corp Statistics</a>
+                </li>
+                <li><a ui-sref="#">Alliance Statistics</a>
+                </li>
+                <li><a ui-sref="#">Battle Report Fixer</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="btn-group" dropdown is-open="status.isopen2">
+            <button type="button" class="btn btn-primary dropdown-toggle navbar-btn" dropdown-toggle ng-disabled="disabled">Assets</button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a ui-sref="#">Pilot Assets</a>
+                </li>
+                <li><a ui-sref="#">Corp Assets</a>
+                </li>
+            </ul>
+        </div>
     </div>
-
-
-    <div class="btn-group" dropdown is-open="status.isopen2">
-        <button type="button" class="btn btn-primary dropdown-toggle navbar-btn" dropdown-toggle ng-disabled="disabled">Assets</button>
-        <ul class="dropdown-menu" role="menu">
-            <li><a ui-sref="#">Pilot Assets</a>
-            </li>
-            <li><a ui-sref="#">Corp Assets</a>
-            </li>
-        </ul>
-    </div>
-
-    </div>
-
-
 
     <div ui-view></div>
 </body>

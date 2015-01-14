@@ -14,9 +14,9 @@ spaceTools.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     // HOME STATES AND NESTED VIEWS ========================================
     $stateProvider
         .state('home', {
-        url: '/home',
-        template: require('./_home.html')
-    });
+            url: '/home',
+            template: require('./_home.html')
+        });
 }]);
 
 // we might want to change this to be an indocument bootstrap
