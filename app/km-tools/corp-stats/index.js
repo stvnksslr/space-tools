@@ -7,6 +7,7 @@ var corpStats = angular.module('space-tools.km-tools.corp-stats', ['ui.router'])
 function CorpStatsCtrl($scope, $http, $q) {
 
     var loadAlliance = $http.get('https://zkillboard.com/api/losses/no-attackers/allianceID/1354830081/'),
+        loadCorp = $http.get('https://zkillboard.com/api/losses/no-attackers/corporation/98342574/'),
         loadPilot = $http.get('https://zkillboard.com/api/kills/characterID/1564471258/'),
         loadTypeNames = $http.get('app/localAssets/invTypeNames.json');
 
@@ -35,8 +36,8 @@ function CorpStatsCtrl($scope, $http, $q) {
 
 }
 
-// Register out PilotStatsCtrl
-corpStats.controller('PilotStatsCtrl', ['$scope', '$http', '$q', CorpStatsCtrl]);
+// Register out CorpStatsCtrl
+corpStats.controller('CorpStatsCtrl', ['$scope', '$http', '$q', CorpStatsCtrl]);
 
 // Define the states we want to expose for this submodule
 corpStats.config(['$stateProvider', function($stateProvider) {
@@ -48,4 +49,4 @@ corpStats.config(['$stateProvider', function($stateProvider) {
     });
 }]);
 
-export default pilotStats;
+export default corpStats;

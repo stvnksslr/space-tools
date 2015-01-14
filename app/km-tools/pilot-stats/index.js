@@ -7,6 +7,7 @@ var pilotStats = angular.module('space-tools.km-tools.pilot-stats', ['ui.router'
 function PilotStatsCtrl($scope, $http, $q) {
 
     var loadAlliance = $http.get('https://zkillboard.com/api/losses/no-attackers/allianceID/1354830081/'),
+        loadCorp = $http.get('https://zkillboard.com/api/losses/no-attackers/corporation/98342574/'),
         loadPilot = $http.get('https://zkillboard.com/api/kills/characterID/1564471258/'),
         loadTypeNames = $http.get('app/localAssets/invTypeNames.json');
 
