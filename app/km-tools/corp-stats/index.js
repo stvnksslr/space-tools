@@ -16,19 +16,23 @@ function CorpStatsCtrl($scope, $http, $q) {
     // We wait untill all data is loaded so that the template doesn't render too early
     $q.all({
         loadAlliance: loadAlliance,
+        loadCorp: loadCorp,
         loadPilot: loadPilot,
         loadTypeNames: loadTypeNames
     }).then(function(results) {
 
         var alliance = results.loadAlliance.data,
+            corp = results.loadCorp.data,
             pilot = results.loadPilot.data,
             typeNames = results.loadTypeNames.data;
 
         console.log(alliance);
+        console.log(corp);
         console.log(pilot);
         console.log(typeNames);
 
         this.alliance = alliance;
+        this.corp = corp;
         this.pilot = pilot;
         this.typeNames = typeNames;
 
