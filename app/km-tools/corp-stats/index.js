@@ -1,3 +1,4 @@
+'use strict';
 import * as angular from 'angular';
 import * as uiRouter from 'angular-ui-router';
 import * as fs from 'fs';
