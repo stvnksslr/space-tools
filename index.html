@@ -1,4 +1,4 @@
-<!-- index.tml created by skessler-->
+<!-- index.html created by skessler-->
 
 <!DOCTYPE html>
 <html lang="en" ng-app="space-tools">
@@ -17,7 +17,7 @@
             <a class="navbar-brand" ui-sref="home">Space-Tools</a>
         </div>
 
-        <div class="btn-group" dropdown is-open="status.isopen">
+        <div class="btn-group" dropdown is-open="status.kmtoolsOpen">
             <button type="button" class="btn btn-primary dropdown-toggle navbar-btn" dropdown-toggle ng-disabled="disabled">Km-Tools</button>
             <ul class="dropdown-menu" role="menu">
                 <li><a ui-sref="#">Search</a>
@@ -33,7 +33,7 @@
             </ul>
         </div>
 
-        <div class="btn-group" dropdown is-open="status.isopen2">
+        <div class="btn-group" dropdown is-open="status.assetsOpen">
             <button type="button" class="btn btn-primary dropdown-toggle navbar-btn" dropdown-toggle ng-disabled="disabled">Assets</button>
             <ul class="dropdown-menu" role="menu">
                 <li><a ui-sref="#">Pilot Assets</a>
@@ -43,7 +43,6 @@
             </ul>
         </div>
     </div>
-
     <div ui-view></div>
 </body>
 
