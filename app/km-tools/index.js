@@ -5,8 +5,9 @@ import * as uiRouter from 'angular-ui-router';
 
 import './pilot-stats';
 import './corp-stats';
+import './alliance-stats/';
 
-var kmTools = angular.module('space-tools.km-tools', ['ui.router', 'space-tools.km-tools.pilot-stats', 'space-tools.km-tools.corp-stats']);
+var kmTools = angular.module('space-tools.km-tools', ['ui.router', 'space-tools.km-tools.pilot-stats', 'space-tools.km-tools.corp-stats', 'space-tools._km-tools.alliance-stats']);
 
 kmTools.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
