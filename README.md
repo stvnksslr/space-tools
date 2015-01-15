@@ -7,8 +7,9 @@ Dependencies:
 Gulp
 npm
 
-To begin working on the app checkout the space tools repo, once checked out run npm install, once npm install finishes grabbing the proper dependencies run the command gulp. This will run the default gulp task which will create your build folder from which to run the app.
+Frameworks/languages used: Bootstrap + Angular + ES6 + SASS
 
+To begin working on the app checkout the space tools repo, once checked out run npm install, once npm install finishes grabbing the proper dependencies run the command gulp. This will run the default gulp task which will create your build folder from which to run the app.
 
 File structure explantion
 
