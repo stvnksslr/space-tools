@@ -9,7 +9,11 @@ npm
 
 **Frameworks/languages used:** Bootstrap + Angular + ES6 + SASS
 
-To begin working on the app checkout the space tools repo, once checked out run npm install, once npm install finishes grabbing the proper dependencies run the command gulp. This will run the default gulp task which will create your build folder from which to run the app.
+**Steps to compile**
+**1.** npm install
+**2.** gulp 
+**3.** gulp styles
+**4.** launch the app from build/index.html
 
 **File structure explantion**
 
