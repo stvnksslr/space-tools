@@ -10,10 +10,10 @@ npm
 **Frameworks/languages used:** Bootstrap + Angular + ES6 + SASS
 
 **Steps to compile**
-**1.** npm install
-**2.** gulp 
-**3.** gulp styles
-**4.** launch the app from build/index.html
+* **1.** npm install
+* **2.** gulp 
+* **3.** gulp styles
+* **4.** launch the app from build/index.html
 
 **File structure explantion**
 
