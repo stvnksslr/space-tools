@@ -1,4 +1,4 @@
-<!-- pilotStats.html -->
+<!-- allianceStats.html -->
 
 <div>
     <table class="table table-striped kills" id="searchTextResults">
@@ -9,12 +9,10 @@
             <th>Ship type</th>
             <th>Isk Loss</th>
         </tr>
-
-
-        <div> Search: </div>
+        Search:
         <input ng-model="searchText">
 
-        <tr ng-repeat="kill in PilotStats.pilot">
+        <tr ng-repeat="kill in AllianceStats.alliance | filter:searchText">
             <td class="Character">
                 <img ng-src="https://image.eveonline.com/Character/{{kill.victim.characterID}}_32.jpg">{{kill.victim.characterName}}</td>
             <td class="Alliance">

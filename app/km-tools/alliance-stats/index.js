@@ -3,9 +3,9 @@ import * as angular from 'angular';
 import * as uiRouter from 'angular-ui-router';
 import * as fs from 'fs';
 
-var corpStats = angular.module('space-tools.km-tools.corp-stats', ['ui.router']);
+var allianceStats = angular.module('space-tools.km-tools.alliance-stats', ['ui.router']);
 
-function CorpStatsCtrl($scope, $http, $q) {
+function AllianceStatsCtrl($scope, $http, $q) {
 
     var loadAlliance = $http.get('https://zkillboard.com/api/losses/no-attackers/allianceID/1354830081/'),
         loadCorp = $http.get('https://zkillboard.com/api/losses/no-attackers/corporation/98342574/'),
@@ -42,16 +42,16 @@ function CorpStatsCtrl($scope, $http, $q) {
 }
 
 // Register out CorpStatsCtrl
-corpStats.controller('CorpStatsCtrl', ['$scope', '$http', '$q', CorpStatsCtrl]);
+allianceStats.controller('AllianceStatsCtrl', ['$scope', '$http', '$q', AllianceStatsCtrl]);
 
 // Define the states we want to expose for this submodule
-corpStats.config(['$stateProvider', function($stateProvider) {
-    $stateProvider.state('km-tools.corp-stats', {
-        url: '/corp-stats',
-        template: require('./_corp-stats.html'),
-        controller: 'CorpStatsCtrl',
-        controllerAs: 'CorpStats'
+allianceStats.config(['$stateProvider', function($stateProvider) {
+    $stateProvider.state('km-tools.alliance-stats', {
+        url: '/alliance-stats',
+        template: require('./_alliance-stats.html'),
+        controller: 'AllianceStatsCtrl',
+        controllerAs: 'AllianceStats'
     });
 }]);
 
-export default corpStats;
+export default allianceStats;

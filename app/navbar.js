@@ -1,6 +1,9 @@
 /**
  * Created by skessler on 12/2/14.
  */
+
+'use strict';
+
 import * as angular from 'angular';
 import * as uiRouter from 'angular-ui-router';
 import * as angularBootstrap from 'angular-bootstrap';

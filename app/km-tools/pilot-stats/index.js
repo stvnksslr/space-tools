@@ -1,3 +1,4 @@
+'use strict';
 import * as angular from 'angular';
 import * as uiRouter from 'angular-ui-router';
 import * as fs from 'fs';
@@ -10,6 +11,7 @@ function PilotStatsCtrl($scope, $http, $q) {
         loadCorp = $http.get('https://zkillboard.com/api/losses/no-attackers/corporation/98342574/'),
         loadPilot = $http.get('https://zkillboard.com/api/kills/characterID/1564471258/'),
         loadTypeNames = $http.get('app/localAssets/invTypeNames.json');
+        search = $http.get('https://zkillboard.com/api/kills/characterID/')
 
     // Using $q.all we can wait until all of the data is loaded before
     // setting it on this controller.
