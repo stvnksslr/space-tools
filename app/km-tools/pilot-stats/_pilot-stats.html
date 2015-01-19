@@ -9,10 +9,12 @@
             <th>Ship type</th>
             <th>Isk Loss</th>
         </tr>
-        Search:
+
+
+        <div> Search: </div>
         <input ng-model="searchText">
 
-        <tr ng-repeat="kill in PilotStats.pilot | filter:searchText">
+        <tr ng-repeat="kill in PilotStats.pilot">
             <td class="Character">
                 <img ng-src="https://image.eveonline.com/Character/{{kill.victim.characterID}}_32.jpg">{{kill.victim.characterName}}</td>
             <td class="Alliance">
