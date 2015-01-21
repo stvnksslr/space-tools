@@ -2,6 +2,7 @@
  * Created by skessler on 12/11/14.
  */
 
+'use strict';
 
 var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
@@ -9,13 +10,9 @@ var gulp = require('gulp'),
     minifycss = require('gulp-minify-css'),
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
-    cache = require('gulp-cache'),
-    livereload = require('gulp-livereload'),
-    del = require('del'),
     browserify = require('browserify'),
     watchify = require('watchify'),
     to5 = require('gulp-6to5'),
@@ -55,7 +52,6 @@ gulp.task('watch:build', ['6to5'], function() {
         entries: './app/index.js'
     }));
 
-
     bundler.on('update', rebundle);
 
     function rebundle() {
@@ -84,15 +80,7 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('build/app'));
 });
 
-// gulp.task('styles', function() {
-//     return gulp.src('./app/app.scss')
-//         .pipe(sass({
-//             style: 'expanded'
-//         }))
-//         .pipe(gulp.dest('app/'));
-// });
-
-gulp.task('test', function() {
+gulp.task('prefix', function() {
     return gulp.src('./app/app.scss')
         .pipe(sass({
             style: 'expanded'
@@ -124,17 +112,3 @@ gulp.task('scripts', function() {
             message: 'Scripts task complete'
         }));
 });
-
-gulp.task('test2', function() {
-    return gulp.src('./**/**.scss')
-        .pipe(sass({
-            style: 'expanded'
-        }))
-        .pipe(gulp.dest('app/'));
-});
-
-
-// gulp.task('watch', function() {
-
-//     gulp.watch('/**/*.scss', ['styles']);
-// });
