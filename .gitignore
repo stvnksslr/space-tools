@@ -8,3 +8,5 @@ spaceTools.iml
 app/app.css.map
 npm-debug.log
 .sass-cache
+space-tools.sublime-project
+space-tools.sublime-workspace
