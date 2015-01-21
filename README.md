@@ -17,10 +17,10 @@ npm
 
 **File structure explantion**
 
-**es5/** - older version of javascript for use in current day browsers due to the newness of the ES6 syntax and tyle
+```app/``` - Where you will be changing code and making modifications to be compiled, this entire directory consists of Bootstrap + Angular + ES6 + SASS to form the backbone and core of the front end portion of the application.
 
-**app/** - where you will be changing code and making modifications to be compiled, this entire directory consists of Bootstrap + Angular + ES6 + SASS to form the backbone and core of the front end portion of the application.
+```es5/``` - 6to5 compiled source files from ```app/```, *used for reference/debugging*
 
-**build/** - this folder is where you want to be running the code that you are writing in the app folder it is the finished compiled/minified version of the code and is able to be viewd in modern browsers.
+```build/``` - Contains the browserify compiled code, and SASS compiled styles for the app.
 
-**index.html** - this is the roots that the app tree springs from and the only file outside of the app folder you will be editing.
+```index.html``` - This is the entry point for the app and is the only file outside of the app folder you will be editing.
