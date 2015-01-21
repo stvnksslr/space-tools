@@ -7,31 +7,30 @@ var pilotStats = angular.module('space-tools.km-tools.pilot-stats', ['ui.router'
 
 function PilotStatsCtrl($scope, $http, $q) {
 
-    var loadAlliance = $http.get('https://zkillboard.com/api/losses/no-attackers/allianceID/1354830081/'),
-        loadCorp = $http.get('https://zkillboard.com/api/losses/no-attackers/corporation/98342574/'),
-        loadPilot = $http.get('https://zkillboard.com/api/kills/characterID/1564471258/'),
-        loadTypeNames = $http.get('app/localAssets/invTypeNames.json'),
-        search = $http.get('https://zkillboard.com/api/kills/characterID/');
+    var loadPilot = $http.get('https://zkillboard.com/api/kills/characterID/1564471258/'),
+        loadSystems = $http.get('http://public-crest.eveonline.com/industry/systems/'),
+        loadTypeNames = $http.get('http://public-crest.eveonline.com/types/');
+
 
     // Using $q.all we can wait until all of the data is loaded before
     // setting it on this controller.
     // We wait untill all data is loaded so that the template doesn't render too early
     $q.all({
-        loadAlliance: loadAlliance,
         loadPilot: loadPilot,
+        loadSystems: loadSystems,
         loadTypeNames: loadTypeNames
     }).then(function(results) {
 
-        var alliance = results.loadAlliance.data,
-            pilot = results.loadPilot.data,
+        var pilot = results.loadPilot.data,
+            systems = results.loadSystems.data,
             typeNames = results.loadTypeNames.data;
 
-        console.log(alliance);
         console.log(pilot);
+        console.log(systems);
         console.log(typeNames);
 
-        this.alliance = alliance;
         this.pilot = pilot;
+        this.systems = systems;
         this.typeNames = typeNames;
 
     }.bind(this));

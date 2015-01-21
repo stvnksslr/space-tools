@@ -8,8 +8,8 @@
             <th>Corp</th>
             <th>Ship type</th>
             <th>Isk Loss</th>
+            <th>System</th>
         </tr>
-
 
         <div> Search: </div>
         <input ng-model="searchText">
@@ -24,6 +24,7 @@
             <td class="Ship-type">
                 <img ng-src="https://image.eveonline.com/Render/{{kill.victim.shipTypeID}}_32.png">{{PilotStats.typeNames[kill.victim.shipTypeID].name}}</td>
             <td>{{kill.zkb.totalValue | number : 0}}</td>
+            <td class="System"> {{PilotStats.systems.solarSystem.items[kill.solarSystemID].name}} </td>
         </tr>
     </table>
 </div>
