@@ -10,7 +10,7 @@ function CorpStatsCtrl($scope, $http, $q) {
     var loadAlliance = $http.get('https://zkillboard.com/api/losses/no-attackers/allianceID/1354830081/'),
         loadCorp = $http.get('https://zkillboard.com/api/losses/no-attackers/corporation/98342574/'),
         loadPilot = $http.get('https://zkillboard.com/api/kills/characterID/1564471258/'),
-        loadTypeNames = $http.get('app/localAssets/invTypeNames.json');
+        loadTypeNames = $http.get('http://public-crest.eveonline.com/types/');
 
     // Using $q.all we can wait until all of the data is loaded before
     // setting it on this controller.

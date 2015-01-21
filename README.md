@@ -9,18 +9,15 @@ npm
 
 **Frameworks/languages used:** Bootstrap + Angular + ES6 + SASS
 
-**Steps to compile**
-* **1.** npm install
-* **2.** gulp 
-* **3.** gulp styles
-* **4.** launch the app from build/index.html
+To begin working on the app checkout the space tools repo, once checked out run npm install, once npm install finishes grabbing the proper dependencies run the command gulp. This will run the default gulp task which will create your build folder from which to run the app.
 
 **File structure explantion**
 
-```app/``` - Where you will be changing code and making modifications to be compiled, this entire directory consists of Bootstrap + Angular + ES6 + SASS to form the backbone and core of the front end portion of the application.
+**es5/** - older version of javascript for use in current day browsers due to the newness of the ES6 syntax and tyle
 
-```es5/``` - 6to5 compiled source files from ```app/```, *used for reference/debugging*
+**app/** - where you will be changing code and making modifications to be compiled, this entire directory consists of Bootstrap + Angular + ES6 + SASS to form the backbone and core of the front end portion of the application.
 
-```build/``` - Contains the browserify compiled code, and SASS compiled styles for the app.
+**build/** - this folder is where you want to be running the code that you are writing in the app folder it is the finished compiled/minified version of the code and is able to be viewd in modern browsers.
 
-```index.html``` - This is the entry point for the app and is the only file outside of the app folder you will be editing.
+**index.html** - this is the roots that the app tree springs from and the only file outside of the app folder you will be editing.
+>>>>>>> feature/assetTab
