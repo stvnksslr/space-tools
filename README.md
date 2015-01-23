@@ -3,9 +3,8 @@ Space-Tools
 
 A series of tools and proofs of concept for EvE online
 
-**Dependencies:**
-Gulp
-npm
+[**Dependencies listed in package.json**](https://github.com/stvnksslr/spaceTools/blob/master/package.json)
+
 
 **Frameworks/languages used:** Bootstrap + Angular + ES6 + SASS
 
