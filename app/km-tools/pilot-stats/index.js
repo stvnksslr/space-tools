@@ -4,7 +4,7 @@ import * as uiRouter from 'angular-ui-router';
 import * as _ from 'lodash';
 import * as fs from 'fs';
 
-var pilotStats = angular.module('space-tools.km-tools.pilot-stats','space-tools.km-tools.kill-details' ['ui.router']);
+var pilotStats = angular.module('space-tools.km-tools.pilot-stats',['ui.router']);
 
 function PilotStatsCtrl($scope, $http, $q) {
 
@@ -30,7 +30,7 @@ function PilotStatsCtrl($scope, $http, $q) {
         console.log(typeNames);
 
         this.pilot = pilot;
-        this.systems = _(systems).pluck('items').pluck('solarSystem').indexBy('id').value();
+        this.systems = systems;
         this.typeNames = typeNames;
 
     }.bind(this));

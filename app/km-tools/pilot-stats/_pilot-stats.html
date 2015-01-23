@@ -14,7 +14,7 @@
         <div> Search: </div>
         <input ng-model="searchText">
 
-        <tr ng-repeat="kill in PilotStats.pilot" ui-sref="km-tools.kill-details({killmailID: kill.killmailID})">
+        <tr ng-repeat="kill in PilotStats.pilot" ui-sref="km-tools.kill-details({killID: kill.killID})">
             <td class="Character">
                 <img ng-src="https://image.eveonline.com/Character/{{kill.victim.characterID}}_32.jpg">{{kill.victim.characterName}}</td>
             <td class="Alliance">
@@ -24,7 +24,7 @@
             <td class="Ship-type">
                 <img ng-src="https://image.eveonline.com/Render/{{kill.victim.shipTypeID}}_32.png">{{PilotStats.typeNames[kill.victim.shipTypeID].name}}</td>
             <td>{{kill.zkb.totalValue | number : 0}}</td>
-            <td class="System"> {{PilotStats.systems.solarSystem.items[kill.solarSystemID].name}} </td>
+            <td class="System"> {{kill.solarSystemID}} </td>
         </tr>
     </table>
 </div>
