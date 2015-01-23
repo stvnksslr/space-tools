@@ -13,7 +13,7 @@ kmTools.config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
 
     $urlRouterProvider.otherwise('/home');
     $stateProvider.state('km-tools', {
-        abstract: true,
+        abstract: true,a
         url: '/km-tools',
         // Note: abstract still needs a ui-view for its children to populate.
         // You can simply add it inline here.
