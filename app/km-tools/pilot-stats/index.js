@@ -4,7 +4,7 @@ import * as uiRouter from 'angular-ui-router';
 import * as _ from 'lodash';
 import * as fs from 'fs';
 
-var pilotStats = angular.module('space-tools.km-tools.pilot-stats', ['ui.router']);
+var pilotStats = angular.module('space-tools.km-tools.pilot-stats','space-tools.km-tools.kill-details' ['ui.router']);
 
 function PilotStatsCtrl($scope, $http, $q) {
 
@@ -42,9 +42,7 @@ pilotStats.controller('PilotStatsCtrl', ['$scope', '$http', '$q', PilotStatsCtrl
 
 // Define the states we want to expose for this submodule
 pilotStats.config(['$stateProvider', function($stateProvider) {
-    $stateProvider
-
-    .state('km-tools.pilot-stats', {
+    $stateProvider.state('km-tools.pilot-stats', {
         url: '/pilot-stats',
         template: require('./_pilot-stats.html'),
         controller: 'PilotStatsCtrl',

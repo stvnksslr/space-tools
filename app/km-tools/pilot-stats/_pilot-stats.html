@@ -10,11 +10,11 @@
             <th>Isk Loss</th>
             <th>System</th>
         </tr>
-        
+
         <div> Search: </div>
         <input ng-model="searchText">
 
-        <tr ng-repeat="kill in PilotStats.pilot">
+        <tr ng-repeat="kill in PilotStats.pilot" ui-sref="km-tools.kill-details({killmailID: kill.killmailID})">
             <td class="Character">
                 <img ng-src="https://image.eveonline.com/Character/{{kill.victim.characterID}}_32.jpg">{{kill.victim.characterName}}</td>
             <td class="Alliance">
