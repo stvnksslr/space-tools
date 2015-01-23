@@ -3,7 +3,7 @@
 import * as angular from 'angular';
 import * as uiRouter from 'angular-ui-router';
 
-var killDetails = angular.module('space-tools.kill-details', ['ui.router']);
+var killDetails = angular.module('space-tools.km-tools.kill-details', ['ui.router']);
 
 killDetails.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
