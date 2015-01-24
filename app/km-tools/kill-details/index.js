@@ -5,6 +5,7 @@ import * as uiRouter from 'angular-ui-router';
 
 var killDetails = angular.module('space-tools.km-tools.kill-details', ['ui.router']);
 
+
 killDetails.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/home');
@@ -14,7 +15,5 @@ killDetails.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
         controller: 'KillDetailsCtrl',
         controllerAs: 'KillDetails'
     });
-
 }]);
-
 export default killDetails;
