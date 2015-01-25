@@ -1,1 +1,14 @@
-<div> Hello world </div>
+<!-- killDetails.html -->
+
+<div>
+    <table class="table table-striped kills" id="searchTextResults">
+        <tr>
+            <th>Victim</th>
+        </tr>
+
+        <tr ng-repeat="kill in PilotStats.pilot">
+            <td class=" Character ">
+                <img ng-src="https://image.eveonline.com/Character/{{kill.victim.characterID}}_32.jpg ">{{kill.victim.characterName}} </td>
+        </tr>
+    </table>
+</div>
