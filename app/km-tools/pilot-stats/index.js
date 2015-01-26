@@ -8,13 +8,14 @@ var pilotStats = angular.module('space-tools.km-tools.pilot-stats',['ui.router']
 
 function PilotStatsCtrl($scope, $http, $q) {
 
-    var loadPilot = $http.get('http://127.0.0.1:8080/app/localAssets/exampleKmStats.json'),
+    var loadPilot = $http.get('/app/localAssets/exampleKmStats.json'),
         loadSystems = $http.get('http://public-crest.eveonline.com/industry/systems/'),
         loadTypeNames = $http.get('http://public-crest.eveonline.com/types/');
 
     // Using $q.all we can wait until all of the data is loaded before
     // setting it on this controller.
     // We wait untill all data is loaded so that the template doesn't render too early
+    
     $q.all({
         loadPilot: loadPilot,
         loadSystems: loadSystems,
