@@ -23,8 +23,6 @@ function KillDetailsCtrl($scope, $http, $q, $stateParams) {
 killDetails.controller('KillDetailsCtrl', ['$scope', '$http', '$q', '$stateParams', KillDetailsCtrl]);
 
 killDetails.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
-
-    $urlRouterProvider.otherwise('/home');
     $stateProvider.state('km-tools.kill-details', {
         url: '/kill-details/:killID',
         template: require('./_kill-details.html'),
@@ -32,4 +30,5 @@ killDetails.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
         controllerAs: 'KillDetails'
     });
 }]);
+
 export default killDetails;
