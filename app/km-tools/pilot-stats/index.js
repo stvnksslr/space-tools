@@ -38,7 +38,7 @@ function PilotStatsCtrl($scope, $http, $q) {
 }
 
 // Register out PilotStatsCtrl
-pilotStats.controller('PilotStatsCtrl', ['$scope', '$http', '$q', PilotStatsCtrl]);
+pilotStats.controller('PilotStatsCtrl', ['$scope', '$http', '$q','$stateParams',PilotStatsCtrl]);
 
 // Define the states we want to expose for this submodule
 pilotStats.config(['$stateProvider', function($stateProvider) {

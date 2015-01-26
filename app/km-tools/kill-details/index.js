@@ -7,33 +7,20 @@ import * as uiRouter from 'angular-ui-router';
 var killDetails = angular.module('space-tools.km-tools.kill-details', ['ui.router']);
 
 
-function KillDetailsCtrl($scope, $http, $q) {
+function KillDetailsCtrl($scope, $http, $q, $stateParams) {
 
-    var loadPilot = $http.get('http://127.0.0.1:8080/app/localAssets/exampleKmStats.json'),
-        loadTypeNames = $http.get('http://public-crest.eveonline.com/types/');
+    var killID = $http.get('http://some.zkillboard.api/ <http://public-crest.eveonline.com/types/>' + $stateParams.killID);
 
-    // Using $q.all we can wait until all of the data is loaded before
-    // setting it on this controller.
-    // We wait untill all data is loaded so that the template doesn't render too early
+
     $q.all({
-        loadPilot: loadPilot,
-        loadTypeNames: loadTypeNames
+
     }).then(function(results) {
-
-        var pilot = results.loadPilot.data,
-            typeNames = results.loadTypeNames.data;
-
-        console.log(pilot);
-        console.log(typeNames);
-
-        this.pilot = pilot;
-        this.typeNames = typeNames;
 
     }.bind(this));
 
 }
 
-killDetails.controller('KillDetailsCtrl', ['$scope', '$http', '$q', KillDetailsCtrl]);
+killDetails.controller('KillDetailsCtrl', ['$scope', '$http', '$q', '$stateParams', KillDetailsCtrl]);
 
 killDetails.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
