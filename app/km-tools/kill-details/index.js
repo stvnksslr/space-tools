@@ -3,12 +3,13 @@
 import * as angular from 'angular';
 import * as uiRouter from 'angular-ui-router';
 
+
 var killDetails = angular.module('space-tools.km-tools.kill-details', ['ui.router']);
 
 
 function KillDetailsCtrl($scope, $http, $q) {
 
-    var loadPilot = $http.get('https://zkillboard.com/api/kills/characterID/1564471258/'),
+    var loadPilot = $http.get('http://127.0.0.1:8080/app/localAssets/exampleKmStats.json'),
         loadTypeNames = $http.get('http://public-crest.eveonline.com/types/');
 
     // Using $q.all we can wait until all of the data is loaded before
@@ -38,7 +39,7 @@ killDetails.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
 
     $urlRouterProvider.otherwise('/home');
     $stateProvider.state('km-tools.kill-details', {
-        url: '/kill-details/:killmailID',
+        url: '/kill-details/:killID',
         template: require('./_kill-details.html'),
         controller: 'KillDetailsCtrl',
         controllerAs: 'KillDetails'
