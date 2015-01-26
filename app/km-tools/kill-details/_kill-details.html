@@ -1,4 +1,17 @@
 <!-- killDetails.html -->
-<div>
-    {{KillDetails.kill.victim.characterName}} lost a {{KillDetails.kill.victim.shipTypeID}} worth {{KillDetails.kill.zkb.totalValue | number: 2}} isk
+<div class="row">
+    <div class="col-md-3">
+        <h3>Pilot</h3>
+        <div class="row">
+            {{KillDetails.kill.victim.characterName}} lost a {{KillDetails.kill.victim.shipTypeID}} worth {{KillDetails.kill.zkb.totalValue | number: 2}} isk
+        </div>
+    </div>
+    <div class="col-md-3">
+        <h3>Items</h3>
+        <div class="row" ng-repeat="item in KillDetails.kill.items">{{item.typeID}}: Dropped {{item.qtyDropped}}, Destroyed: {{item.qtyDestroyed}}</div>
+    </div>
+    <div class="col-md-3">
+        <h3>Attackers</h3>
+        <div class="row" ng-repeat="attacker in KillDetails.kill.attackers">{{attacker.characterName}} in a {{attacker.shipTypeID}} with a {{attacker.weaponTypeID}}</div>
+    </div>
 </div>
