@@ -9,13 +9,13 @@ var killDetails = angular.module('space-tools.km-tools.kill-details', ['ui.route
 
 function KillDetailsCtrl($scope, $http, $q, $stateParams) {
 
-    var killID = $http.get('http://some.zkillboard.api/ <http://public-crest.eveonline.com/types/>' + $stateParams.killID);
-
+    var killID = $stateParams.killID;
+    var loadKills = $http.get(`https://zkillboard.com/api/${killID}/`);
 
     $q.all({
-
+        kills: loadKills
     }).then(function(results) {
-
+        this.kill = results.kills.data[0] // the killmail is the 0th item in the response array
     }.bind(this));
 
 }
