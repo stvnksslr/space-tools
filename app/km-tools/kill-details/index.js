@@ -10,7 +10,7 @@ var killDetails = angular.module('space-tools.km-tools.kill-details', ['ui.route
 function KillDetailsCtrl($scope, $http, $q, $stateParams) {
 
     var killID = $stateParams.killID;
-    var loadKills = $http.get(`https://zkillboard.com/api/${killID}/`);
+    var loadKills = $http.get(`https://zkillboard.com/api/killID/${killID}/`);
 
     $q.all({
         kills: loadKills
