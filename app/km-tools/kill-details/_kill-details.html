@@ -1,14 +1,4 @@
 <!-- killDetails.html -->
-
 <div>
-    <table class="table table-striped kills" id="searchTextResults">
-        <tr>
-            <th>Victim</th>
-        </tr>
-
-        <tr ng-repeat="kill in PilotStats.pilot">
-            <td class=" Character  ">
-                {{kill.killID}}
-        </tr>
-    </table>
+    {{kill.victim.characterName}} lost a {{kill.victim.shipTypeID}} worth {{kill.zkb.totalValue | number: 2}} isk
 </div>
