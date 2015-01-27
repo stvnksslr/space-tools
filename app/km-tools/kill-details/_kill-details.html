@@ -22,7 +22,29 @@
             <td class="danger">
                 <img ng-src="https://image.eveonline.com/Render/{{KillDetails.kill.victim.shipTypeID}}_256.png">
             </td>
-            <td class="danger" ng-repeat="item in KillDetails.kill.items"> {{item.typeID}} </td>
+        </tr>
+        <tr ng-repeat="item in KillDetails.kill.items">
+            <!--           <td class="danger"> {{item.typeID}} </td> -->
+            <td class="danger"> {{KillDetails.typeNames.items.type.id[KillDetails.kill.item.typeID].name}} </td>
         </tr>
     </table>
 </div>
+
+<!-- {{PilotStats.typeNames[kill.victim.shipTypeID].name}} 
+
+
+{
+    "totalCount_str": "9641",
+    "items": [{
+        "adjustedPrice": 158947.09,
+        "averagePrice": 156711.67,
+        "type": {
+            "id_str": "32772",
+            "href": "http://public-crest.eveonline.com/types/32772/",
+            "id": 32772,
+            "name": "Medium Ancillary Shield Booster"
+        }
+    }, {
+
+
+-->

@@ -22,7 +22,8 @@
             <td class="Corp">
                 <img ng-src="https://image.eveonline.com/Corporation/{{kill.victim.corporationID}}_32.png">{{kill.victim.corporationName}}</td>
             <td class="Ship-type">
-                <img ng-src="https://image.eveonline.com/Render/{{kill.victim.shipTypeID}}_32.png">{{PilotStats.typeNames[kill.victim.shipTypeID].name}}</td>
+                <img ng-src="https://image.eveonline.com/Render/{{kill.victim.shipTypeID}}_32.png">
+            </td>
             <td>{{kill.zkb.totalValue | number : 0}}</td>
             <td class="System"> {{kill.solarSystemID}} </td>
         </tr>

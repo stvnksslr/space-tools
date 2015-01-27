@@ -2,6 +2,8 @@
 
 import * as angular from 'angular';
 import * as uiRouter from 'angular-ui-router';
+import * as _ from 'lodash';
+
 
 
 var killDetails = angular.module('space-tools.km-tools.kill-details', ['ui.router']);
@@ -11,7 +13,7 @@ function KillDetailsCtrl($scope, $http, $q, $stateParams) {
 
     var killID = $stateParams.killID,
         loadKills = $http.get(`https://zkillboard.com/api/killID/${killID}/`),
-        loadTypeNames = $http.get('http://public-crest.eveonline.com/types/');
+        loadTypeNames = $http.get('http://public-crest.eveonline.com/market/prices/');
 
     $q.all({
         kills: loadKills,
