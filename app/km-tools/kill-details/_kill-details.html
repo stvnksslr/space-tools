@@ -17,13 +17,12 @@
             <td class="System">
                 {{KillDetails.kill.solarSystemID}}</td>
         </tr>
+
         <tr>
             <td class="danger">
                 <img ng-src="https://image.eveonline.com/Render/{{KillDetails.kill.victim.shipTypeID}}_256.png">
             </td>
-
-            <td class="danger"> {{KillDetails.kill.items}} </td>
+            <td class="danger" ng-repeat="item in KillDetails.kill.items"> {{item.typeID}} </td>
         </tr>
-
     </table>
 </div>
