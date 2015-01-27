@@ -1,17 +1,29 @@
 <!-- killDetails.html -->
-<div class="row">
-    <div class="col-md-3">
-        <h3>Pilot</h3>
-        <div class="row">
-            {{KillDetails.kill.victim.characterName}} lost a {{KillDetails.kill.victim.shipTypeID}} worth {{KillDetails.kill.zkb.totalValue | number: 2}} isk
-        </div>
-    </div>
-    <div class="col-md-3">
-        <h3>Items</h3>
-        <div class="row" ng-repeat="item in KillDetails.kill.items">{{item.typeID}}: Dropped {{item.qtyDropped}}, Destroyed: {{item.qtyDestroyed}}</div>
-    </div>
-    <div class="col-md-3">
-        <h3>Attackers</h3>
-        <div class="row" ng-repeat="attacker in KillDetails.kill.attackers">{{attacker.characterName}} in a {{attacker.shipTypeID}} with a {{attacker.weaponTypeID}}</div>
-    </div>
+<div>
+    <table class="table table-striped kills">
+        <tr>
+            <th>Victim</th>
+            <th>Corp</th>
+            <th>Alliance</th>
+            <th>System</th>
+        </tr>
+        <tr>
+            <td class="Character">
+                {{KillDetails.kill.victim.characterName}}</td>
+            <td class="Alliance">
+                {{KillDetails.kill.victim.allianceName}}</td>
+            <td class="Corp">
+                {{KillDetails.kill.victim.corporationName}}</td>
+            <td class="System">
+                {{KillDetails.kill.solarSystemID}}</td>
+        </tr>
+        <tr>
+            <td class="danger">
+                <img ng-src="https://image.eveonline.com/Render/{{KillDetails.kill.victim.shipTypeID}}_256.png">
+            </td>
+
+            <td class="danger"> {{KillDetails.kill.items}} </td>
+        </tr>
+
+    </table>
 </div>
