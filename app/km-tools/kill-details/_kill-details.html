@@ -23,10 +23,14 @@
                 <img ng-src="https://image.eveonline.com/Render/{{KillDetails.kill.victim.shipTypeID}}_256.png">
             </td>
         </tr>
-        <tr ng-repeat="item in KillDetails.kill.items">
+        <tr>
             <!--           <td class="danger"> {{item.typeID}} </td> -->
-            <td class="danger"> {{KillDetails.typeNames.items.type.id[KillDetails.kill.item.typeID].name}} </td>
+            <td class="danger"> {{KillDetails.kill.items}} </td>
         </tr>
+        <tr ng-repeat="attackers in KillDetails.kill.attackers">
+            <td class="warning"> {{KillDetails.kill.attackers}} </td>
+        </tr>
+
     </table>
 </div>
 
