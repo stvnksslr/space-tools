@@ -2,6 +2,7 @@ Space-Tools
 ==========
 
 [![Join the chat at https://gitter.im/stvnksslr/spaceTools](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/stvnksslr/spaceTools?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/stvnksslr/spaceTools.svg)](https://travis-ci.org/stvnksslr/spaceTools)
 
 A series of tools and proofs of concept for EvE online
 
