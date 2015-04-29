@@ -52,7 +52,7 @@
     "del": "^1.1.0",
     "gulp-autoprefixer": "^2.0.0",
     "gulp-cache": "^0.2.4",
-    "gulp-concat": "^2.4.2",p
+    "gulp-concat": "^2.4.2",
     "gulp-imagemin": "^2.0.0",
     "gulp-jshint": "^1.9.0",
     "gulp-livereload": "^2.1.1",
